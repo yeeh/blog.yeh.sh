@@ -22,6 +22,8 @@ auto: true
 rouge: true
 markdown: kramdown
 timezone: America/Los_Angeles
+plugins:
+  - jekyll-paginate
 
 # ---------------------- #
 # deployment             #
