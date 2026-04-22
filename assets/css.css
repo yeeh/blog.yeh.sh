@@ -24,9 +24,10 @@ input[type=submit], button, label[for]{cursor:pointer;}
 input[readonly],textarea[readonly]{ background-color:#ededed;}
 abbr[title], acronym[title]{border-bottom:thin solid;cursor:help;}
 strong, b{font-weight:bold;}
+em { margin: 0 0.15em; padding: 0 0.2em; background-color: rgba(0, 0, 0, 0.05); border-radius: 3px; font-style: italic;}
 blockquote {border-left:5px solid #e5e5e5; margin:10px 0; padding:0 0 0 20px; }
 pre { padding:10px 20px; border-radius: 5px; background: #f6f6f6; border:1px solid #e5e5e5; overflow-x: auto;}
-table {width:100%;}
+table {width:100%; margin-top: 16px;}
 th, td {text-align:left; padding:5px 10px; border:1px solid #e5e5e5;}
 th{ font-weight: bold; background-color: #eee;}
 table tr:nth-child(2n) {background-color: #f8f8f8;}
@@ -38,12 +39,12 @@ img {max-width:100%;}
 body {color:#333;}
 a{color:#000; }
 a:hover{color:#666;}
-h1 { font-size:2.25rem;}
-h2 { font-size:2rem;}
-h3 { font-size:1.75rem;}
-h4 { font-size:1.5rem;}
-h5 { font-size:1.25rem;}
-h6 { font-size:1rem;}
+h1 { font-size:2.5rem; font-weight: 700;}
+h2 { font-size:2rem; font-weight: 600;}
+h3 { font-size:1.75rem; font-weight: 600;}
+h4 { font-size:1.5rem; font-weight: 600;}
+h5 { font-size:1.25rem; font-weight: 500;}
+h6 { font-size:1.1rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;}
 .hidden{ display:none;}
 
 /*common*/
@@ -87,13 +88,13 @@ embed{ display: none;}
 .entry-categories, .entry-tags{margin-left:10px; }
 .entry-categories a, .entry-comments span, .entry-tags a{ font-style:normal; margin:0 4px;}
 .entry-categories a:nth-child(n+2):before, .entry-tags a:nth-child(n+2):before{ padding-right: 12px;}
-.entry-content{ margin-top:20px; word-wrap:break-word; word-break:break-all;}
+.entry-content{ margin-top:20px; word-wrap:break-word; word-break: break-word; overflow-wrap: break-word;}
 .entry-content iframe{ width: 100%; }
 .entry-content a{ text-decoration: underline; color: #666;}
 .entry-content p, .entry-content li{ margin-top:8px;}
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6{ margin-top: 20px; }
 .entry-content .highlight {margin: 10px 0;}
-.entry-content ul, .entry-content ol{ margin-top: 16px;}
+.entry-content ul, .entry-content ol{ margin-top: 16px; padding-left: 2em;}
 .entry-content ul{ list-style-type: disc;}
 .entry-content ol{ list-style-type: decimal;}
 .entry-readmore{ padding:20px 0;}
@@ -325,6 +326,9 @@ embed{ display: none;}
     background: #181a1b;
     border-color: #34373a;
     color: #dfe3e6;
+  }
+  em {
+    background-color: rgba(168, 199, 250, 0.1);
   }
   .highlight {
     background: #181a1b;
