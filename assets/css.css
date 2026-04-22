@@ -256,7 +256,7 @@ embed{ display: none;}
   .sitetitle {
     color: #e8eaed;
   }
-  a{color:#e8eaed; }
+  a{color:#bdc1c6; }
   a:hover{color:#8ab4f8;}
   blockquote,
   th,
@@ -271,16 +271,31 @@ embed{ display: none;}
     border-color: #5f6368;
   }
   th{
-    background-color: #303134;
+    background-color: #2d2f31;
     color:#e8eaed;
   }
-  table tr:nth-child(2n),
+  td {
+    background-color: #1f1f1f;
+  }
+  table tr:nth-child(2n) {
+    background-color:#27292b;
+  }
   .nav a.selected,
   .nav a:hover,
   .entry-time,
   .pagination-prev,
   .pagination-next {
-    background-color:#303134;
+    background-color:#3c4043;
+  }
+  .nav a.selected,
+  .nav a:hover,
+  .pagination a,
+  .pagination-prev,
+  .pagination-next {
+    color:#e8eaed;
+  }
+  .nav a.selected:after {
+    border-bottom-color: #1f1f1f;
   }
   .entry-day,
   .search input:focus {
@@ -307,12 +322,12 @@ embed{ display: none;}
     color:#9aa0a6;
   }
   pre {
-    background: #303134;
-    border-color: #5f6368;
+    background: #171717;
+    border-color: #3c4043;
     color: #e8eaed;
   }
   .highlight {
-    background: #303134;
+    background: #171717;
     color: #e8eaed;
   }
   .entry-content a,
