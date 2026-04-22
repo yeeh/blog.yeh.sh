@@ -17,8 +17,6 @@ excerpt_separator: '\n\n'
 # ---------------------- #
 # jekyll                 #
 # ---------------------- #
-safe: true
-auto: true
 rouge: true
 markdown: kramdown
 timezone: America/Los_Angeles
