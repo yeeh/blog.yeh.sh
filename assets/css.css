@@ -242,7 +242,7 @@ embed{ display: none;}
 /*dark mode*/
 @media screen and (prefers-color-scheme: dark) {
   body {
-    background-color: #000;
+    background-color: #1f1f1f;
     color: #fff;
   }
   legend{color:#fff;}
