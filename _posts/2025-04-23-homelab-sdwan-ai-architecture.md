@@ -19,7 +19,7 @@ tags: Homelab SDWAN 软路由 网络架构 AI
 - **核心网络服务**：
   - AdGuardHome：全站点统一去广告、恶意域名拦截
   - mosdns：智能DNS分流，国内域名走ISP DNS，海外走加密DNS
-  - mihomo：统一代理调度，所有AI流量的出口
+  - mihomo：其他3个站点的ai流量的入口
 - **出海核心**：Mac mini M4 双万兆，安装Surge负责最终的出海流量调度
 - **存储服务**：UNAS Pro 8盘位RAID6，总容量84T，存所有个人数据、备份文件、各类资源
 - **应用服务**：n350服务器，跑Immich照片管理、Jellyfin媒体服务、LibreSpeed测速、各类Docker应用
