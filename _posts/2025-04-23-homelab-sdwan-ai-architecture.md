@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 多站点Homelab：SDWAN组网 + 统一AI出口
-date: 2026-04-23 01:00:00 +0800
+date: 2025-04-23 01:00:00 +0800
 categories: 手
 tags: Homelab SDWAN 软路由 网络架构 AI
 ---
