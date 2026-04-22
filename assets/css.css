@@ -243,7 +243,7 @@ embed{ display: none;}
 @media screen and (prefers-color-scheme: dark) {
   body {
     background-color: #1f1f1f;
-    color: #e8eaed;
+    color: #d7dadc;
   }
   legend,
   h1,
@@ -254,10 +254,10 @@ embed{ display: none;}
   h6,
   .entry-title a,
   .sitetitle {
-    color: #e8eaed;
+    color: #e3e6e8;
   }
-  a{color:#bdc1c6; }
-  a:hover{color:#8ab4f8;}
+  a{color:#b8bec3; }
+  a:hover{color:#a8c7fa;}
   blockquote,
   th,
   td,
@@ -268,31 +268,31 @@ embed{ display: none;}
   #comments,
   .link h6,
   .tagline {
-    border-color: #5f6368;
+    border-color: #4f5357;
   }
   th{
-    background-color: #2d2f31;
-    color:#e8eaed;
+    background-color: #2a2c2e;
+    color:#e3e6e8;
   }
   td {
     background-color: #1f1f1f;
   }
   table tr:nth-child(2n) {
-    background-color:#27292b;
+    background-color:#242628;
   }
   .nav a.selected,
   .nav a:hover,
   .entry-time,
   .pagination-prev,
   .pagination-next {
-    background-color:#3c4043;
+    background-color:#34373a;
   }
   .nav a.selected,
   .nav a:hover,
   .pagination a,
   .pagination-prev,
   .pagination-next {
-    color:#e8eaed;
+    color:#dfe3e6;
   }
   .nav a.selected:after {
     border-bottom-color: #1f1f1f;
@@ -311,33 +311,33 @@ embed{ display: none;}
   .entry-categories,
   .entry-tags,
   .tagline {
-    color:#bdc1c6;
+    color:#aeb4b9;
   }
   .search input {
-    background-color:#303134;
-    border-color:#5f6368;
-    color:#e8eaed;
+    background-color:#2d3033;
+    border-color:#4f5357;
+    color:#dfe3e6;
   }
   .search input::placeholder {
-    color:#9aa0a6;
+    color:#8f969c;
   }
   pre {
-    background: #171717;
-    border-color: #3c4043;
-    color: #e8eaed;
+    background: #181a1b;
+    border-color: #34373a;
+    color: #dfe3e6;
   }
   .highlight {
-    background: #171717;
-    color: #e8eaed;
+    background: #181a1b;
+    color: #dfe3e6;
   }
   .entry-content a,
   .footer a,
   .link a {
-    color:#8ab4f8;
+    color:#a8c7fa;
   }
   .footer a:hover,
   .entry-content a:hover,
   .link a:hover {
-    color:#aecbfa;
+    color:#c4d7fb;
   }
 }
