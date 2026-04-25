@@ -88,7 +88,7 @@ embed{ display: none;}
 .entry-categories, .entry-tags{margin-left:10px; }
 .entry-categories a, .entry-comments span, .entry-tags a{ font-style:normal; margin:0 4px;}
 .entry-categories a:nth-child(n+2):before, .entry-tags a:nth-child(n+2):before{ padding-right: 12px;}
-.entry-content{ max-width: 760px; margin-top:28px; font-size:1.0625rem; line-height:1.78; font-weight:400; word-wrap:break-word; word-break: break-word; overflow-wrap: break-word;}
+.entry-content{ margin-top:28px; margin-right:40px; font-size:1.0625rem; line-height:1.78; font-weight:400; word-wrap:break-word; word-break: break-word; overflow-wrap: break-word;}
 .entry-content iframe{ width: 100%; }
 .entry-content a{ text-decoration: underline; color: #666; text-underline-offset: 0.16em;}
 .entry-content p{ margin-top:1rem;}
@@ -201,7 +201,7 @@ embed{ display: none;}
 @media screen and (max-width:640px) {
   .entry-header{ padding-left:0;}
   .entry-title{ font-size:2rem; line-height:1.25; padding-left:0;}
-  .entry-content{ max-width:none; font-size:1rem; line-height:1.72;}
+  .entry-content{ margin-right:0; font-size:1rem; line-height:1.72;}
   .entry-content h1{ font-size:2rem;}
   .entry-content h2{ font-size:1.75rem;}
   .entry-content h3{ font-size:1.375rem;}
