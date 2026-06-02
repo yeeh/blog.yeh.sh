@@ -9,4 +9,4 @@ categories: 好
 
 果不其然，早上起来就收到了snapnames的email，说adidas.net会在11号竞价结束，就去瞧了下，么想到真看到个壮观场面，预定者49人，几个现在就开始出价的哥们莫不是都和我这样纯粹是出个价就可以有门票看热闹的，良心大大滴坏了
 
-![adidas.net](../upload/2007-9-9-adidas-net.gif)
+![adidas.net](/upload/2007-9-9-adidas-net.gif)
