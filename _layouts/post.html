@@ -29,6 +29,29 @@ layout: default
 {{ content }}
   </div>
 </article>
+{% if page.url contains '/post/' %}
+<script>
+  document.querySelectorAll('.entry-content img').forEach(function (img) {
+    var imageLink = img.closest('a');
+
+    if (imageLink) {
+      imageLink.target = '_blank';
+      if (!/\bnoopener\b/.test(imageLink.rel)) {
+        imageLink.rel = (imageLink.rel ? imageLink.rel + ' ' : '') + 'noopener';
+      }
+      return;
+    }
+
+    var link = document.createElement('a');
+    link.href = img.currentSrc || img.src;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    img.style.cursor = 'zoom-in';
+    img.parentNode.insertBefore(link, img);
+    link.appendChild(img);
+  });
+</script>
+{% endif %}
 {% if page.theme != 'about' %}
 {% include pagination-post.html %}
 {% endif %}
