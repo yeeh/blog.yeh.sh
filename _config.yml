@@ -6,7 +6,7 @@ baseurl:
 tagline: 闲言碎语
 author: Perry Yeh
 url: https://blog.yeh.sh
-urlyeh: https://www.yeh.sh
+urlyeh: https://yeh.sh
 keywords: Perry Yeh
 description: Whenever possible, find someone to save, and save them.
 permalink: /post/:year/:month/:day/:title:output_ext
