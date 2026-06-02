@@ -2,6 +2,11 @@
 <div class="link layout">
 <h6>Links</h6>
     {% include linkcontent.html %}
+    <nav class="side-menu" aria-label="Footer navigation">
+        <a href="{{ site.baseurl }}/about/">About</a>
+        <a href="{{ site.baseurl }}/about/log.html">Log</a>
+        <a href="{{ site.baseurl }}/about/privacy.html">Privacy</a>
+    </nav>
 </div>
 {% else %}
 <div class="links layout">
@@ -15,5 +20,10 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+    <nav class="side-menu" aria-label="Footer navigation">
+        <a href="{{ site.baseurl }}/about/">About</a>
+        <a href="{{ site.baseurl }}/about/log.html">Log</a>
+        <a href="{{ site.baseurl }}/about/privacy.html">Privacy</a>
+    </nav>
 </div>
 {% endif %}
