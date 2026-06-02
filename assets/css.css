@@ -319,6 +319,7 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   justify-content: flex-end;
   gap: 8px;
   margin-top: 48px;
+  margin-bottom: 48px;
   padding-top: 18px;
   border-top: 1px solid var(--line);
   color: var(--muted);
