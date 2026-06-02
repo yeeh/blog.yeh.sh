@@ -5,23 +5,23 @@ layout: default
   <header class="entry-header">
     <h1 class="entry-title">{{ page.title }}</h1>
     <div class="entry-meta">
-      <time class="entry-time" datetime="{{ page.date }}">{{ page.date | date: '<span class="entry-month">%m</span><span class="entry-year">%Y</span><span class="entry-day">%d</span>' }}</time>
-{% if page.comment != false %}
-      <a class="entry-comments" href="#comments" rel="nofollow" title="comments">Comments</a>
-{% endif %}
+      <time class="entry-time" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
 {% if page.categories %}
       <p class="entry-categories">Categories:
 {% for category in page.categories %}
-<a rel="tag">{{ category }}</a>
+        <a rel="tag">{{ category }}</a>
 {% endfor %}
       </p>
 {% endif %}
 {% if page.tags %}
       <p class="entry-tags">Tags:
 {% for tag in page.tags %}
-<a rel="tag">{{ tag }}</a>
+        <a rel="tag">#{{ tag }}</a>
 {% endfor %}
       </p>
+{% endif %}
+{% if page.comment != false %}
+      <a class="entry-comments" href="#comments" rel="nofollow" title="comments">Comments</a>
 {% endif %}
     </div>
   </header>

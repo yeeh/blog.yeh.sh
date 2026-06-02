@@ -1,34 +1,22 @@
 ---
 layout: default
 ---
+<div class="archive-list">
 {% for post in paginator.posts %}
-<article class="entry" role="article">
-  <header class="entry-header">
-    <h2 class="entry-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    </h2>
-    <div class="entry-meta">
-      <time class="entry-time" datetime="{{ post.date }}">{{ post.date | date: '<span class="entry-month">%m</span><span class="entry-year">%Y</span><span class="entry-day">%d</span>' }}</time>
-{% if post.comment != false %}
-      <a class="entry-comments" href="{{ site.baseurl }}{{ post.url }}#comments" rel="nofollow">Comments</a>
-{% endif %}
+  <article class="archive-item" role="article">
+    <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+    <div>
+      <h2 class="archive-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <p class="archive-summary">{{ post.content | strip_html | normalize_whitespace | truncate: 140 }}</p>
 {% if post.tags %}
-      <p class="entry-tags">Tags:
+      <div class="archive-meta">
 {% for tag in post.tags %}
-<a rel="tag">{{ tag }}</a>
+        <a rel="tag">#{{ tag }}</a>
 {% endfor %}
-      </p>
+      </div>
 {% endif %}
     </div>
-  </header>
-  <div class="entry-content">
-  {% assign fragments = post.content | split: site.excerpt_separator %}
-  {% assign size = fragments | size %}
-
-  {{ fragments | first }}
-
-  {% if size > 1 %}<p><a href="{{ site.baseurl }}{{ post.url }}">Continue read &rarr;</a></p>{% endif %}
-  </div>
-</article>
+  </article>
 {% endfor %}
+</div>
 {% include pagination.html %}
