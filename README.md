@@ -12,7 +12,7 @@ This repository contains a Jekyll blog published with GitHub Pages.
 - `_posts/` — blog posts
 - `about/` — standalone pages
 - `assets/` — static assets
-- `upload/` — historical post images
+- `uploads/` — historical post images
 - `CNAME` — custom domain for GitHub Pages
 
 ## Local development
