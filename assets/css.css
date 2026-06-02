@@ -11,6 +11,8 @@
   --line: #e5e5e5;
   --soft: #f6f6f6;
   --soft-hover: #eee;
+  --table-stripe: #fafafa;
+  --table-hover: #f1f1f1;
   --code-bg: #f7f7f7;
   --code-fg: #111;
   --max: 1120px;
@@ -299,6 +301,8 @@ th, td {
   vertical-align: top;
 }
 th { font-weight: 650; background: var(--soft); }
+tbody tr:nth-child(even) { background: var(--table-stripe); }
+tbody tr:hover { background: var(--table-hover); }
 hr { height: 1px; margin: 2rem 0; border: 0; background: var(--line); }
 dt { margin-top: 1rem; font-weight: 650; }
 dd { margin-left: 1.2rem; color: var(--muted); }
@@ -513,6 +517,8 @@ embed { display: none; }
     --line: #242424;
     --soft: #111;
     --soft-hover: #191919;
+    --table-stripe: #0b0b0b;
+    --table-hover: #171717;
     --code-bg: #0d0d0d;
     --code-fg: #ededed;
   }
