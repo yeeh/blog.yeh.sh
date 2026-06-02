@@ -340,7 +340,7 @@ dd { margin-left: 1.2rem; color: var(--muted); }
 .pagination-prev, .pagination-next { background: transparent; font-weight: 500; }
 
 #comments {
-  margin-top: 56px;
+  margin-bottom: 56px;
   padding-top: 28px;
   border-top: 1px solid var(--line);
 }
