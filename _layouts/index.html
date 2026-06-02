@@ -4,7 +4,7 @@ layout: default
 <div class="archive-list">
 {% for post in paginator.posts %}
   <article class="archive-item" role="article">
-    <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+    <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
     <div>
       <h2 class="archive-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
       <p class="archive-summary">{{ post.content | strip_html | normalize_whitespace | truncate: 140 }}</p>
