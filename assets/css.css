@@ -179,14 +179,13 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
 .archive-list {
   display: grid;
   gap: 0;
-  border-top: 1px solid var(--line);
 }
 .archive-item {
   display: grid;
   grid-template-columns: 92px minmax(0, 1fr);
   gap: 24px;
   padding: 22px 0;
-  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
 }
 .archive-date {
   padding-top: .28em;
@@ -318,7 +317,6 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
-  margin-top: 48px;
   margin-bottom: 48px;
   padding-top: 18px;
   border-top: 1px solid var(--line);
