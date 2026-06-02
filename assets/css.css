@@ -373,6 +373,22 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   margin: 0;
   padding: 5px 0;
 }
+.side-copyright {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  color: var(--faint);
+}
+.side-copyright a {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+.side-copyright img {
+  width: 16px;
+  height: 16px;
+}
 
 .footer {
   display: flex;
