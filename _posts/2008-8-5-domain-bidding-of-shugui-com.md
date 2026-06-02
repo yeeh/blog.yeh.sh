@@ -6,4 +6,4 @@ tags: bidding domain 域名
 categories: 好
 ---
 
-![shugui.com](/upload/2008-8-5-domain-bidding-of-shugui-com.jpg)
+![shugui.com](/upload/2008/8-5-domain-bidding-of-shugui-com.jpg)

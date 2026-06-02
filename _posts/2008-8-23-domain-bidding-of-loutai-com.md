@@ -7,4 +7,4 @@ tags: 域名
 categories: 好
 ---
 
-![loutai.com](/upload/2008-8-23-domain-bidding-of-loutai-com.jpg)
+![loutai.com](/upload/2008/8-23-domain-bidding-of-loutai-com.jpg)

@@ -50,4 +50,4 @@ tags: Homelab SDWAN 软路由 网络架构 AI
 - 带宽利用率更高：海外流量集中到主站，不用每个站点都单独开海外策略，节省成本的同时还能跑满主站出口，边缘站点走主站出口的带宽可以跑满300M，延迟只增加10ms左右，完全够用
 - 冗余度更高：主站双WAN+双旁路，边缘站点同时走sd-wan和旁路，基本不会出现断网的情况
 
-![Homelab架构图](/upload/2026-04-21-homelab-architecture.jpg)
+![Homelab架构图](/upload/2026/04-21-homelab-architecture.jpg)
