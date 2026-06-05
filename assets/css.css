@@ -580,7 +580,7 @@ embed { display: none; }
   .nav a.selected { background: transparent; border-color: var(--accent); }
   .search {
     position: fixed;
-    top: 290px;
+    top: 330px;
     right: 0;
     z-index: 2;
     padding: 0;
