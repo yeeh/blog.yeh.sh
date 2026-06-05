@@ -481,7 +481,6 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   display: grid;
   gap: 0;
   margin-top: 1.4rem;
-  border-top: 1px solid var(--line);
 }
 .skin-option {
   display: grid;
@@ -490,7 +489,7 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   width: 100%;
   padding: 16px 0;
   border: 0;
-  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
   background: transparent;
   color: inherit;
   font: inherit;
