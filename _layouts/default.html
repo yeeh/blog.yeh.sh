@@ -10,6 +10,16 @@ layout: null
 <meta name="description" content="{% if page %}{{ page.title }}.{% endif %} {{ site.description }}">
 <title>{{ page.title }} &middot; {{ site.name }}</title>
 <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
+<script>
+(function () {
+  try {
+    var skin = localStorage.getItem('yeh-blog-skin');
+    if (/^(mono|swiss|ink|warm|signal)$/.test(skin || '')) {
+      document.documentElement.setAttribute('data-theme', skin);
+    }
+  } catch (e) {}
+}());
+</script>
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css.css">
 <link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/rss.xml">
 </head>
