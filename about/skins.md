@@ -26,14 +26,14 @@ Pick a season. It is saved locally in this browser.
 
   function normalize(skin) {
     skin = aliases[skin] || skin;
-    return skins.test(skin || '') ? skin : 'winter';
+    return skins.test(skin || '') ? skin : 'spring';
   }
 
   function current() {
     try {
-      return normalize(localStorage.getItem(key) || root.getAttribute('data-theme') || 'winter');
+      return normalize(localStorage.getItem(key) || root.getAttribute('data-theme') || 'spring');
     } catch (e) {
-      return normalize(root.getAttribute('data-theme') || 'winter');
+      return normalize(root.getAttribute('data-theme') || 'spring');
     }
   }
 

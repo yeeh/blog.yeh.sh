@@ -83,18 +83,18 @@
 :root[data-theme="spring"],
 :root[data-theme="signal"] {
   color-scheme: light;
-  --bg: #f8faf7;
-  --fg: #10130f;
-  --muted: #5c665b;
-  --faint: #8c968a;
-  --line: #d9dfd7;
-  --soft: #eef3ec;
-  --soft-hover: #e3eadf;
-  --table-stripe: #f1f5ef;
-  --table-hover: #e8efe5;
-  --code-bg: #eef3ec;
-  --code-fg: #10130f;
-  --accent: #2f6f3e;
+  --bg: #f3faed;
+  --fg: #10160d;
+  --muted: #5b6f4e;
+  --faint: #8da37d;
+  --line: #d4e5c9;
+  --soft: #e9f4df;
+  --soft-hover: #deedcf;
+  --table-stripe: #edf7e6;
+  --table-hover: #e2f0d7;
+  --code-bg: #e9f4df;
+  --code-fg: #10160d;
+  --accent: #6faa2d;
 }
 
 * { box-sizing: border-box; }
