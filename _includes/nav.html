@@ -1,5 +1,6 @@
 <nav class="nav layout" role="navigation">
 <a href="{{ site.baseurl }}/" {% if paginator.page == 1 %} class="selected" {% endif %}>Index</a>
-<a href="{{ site.baseurl }}/about/" {% if page.theme == 'about' %} class="selected" {% endif %}>About</a>
+<a href="{{ site.baseurl }}/about/" {% if page.theme == 'about' and page.url != '/about/skins.html' %} class="selected" {% endif %}>About</a>
+<a href="{{ site.baseurl }}/about/skins.html" {% if page.url == '/about/skins.html' %} class="selected" {% endif %}>Skins</a>
 <a href="{{ site.baseurl }}/rss.xml" rel="feed">RSS</a>
 </nav>
