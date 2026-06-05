@@ -1,39 +1,44 @@
 ---
 layout: post
-title: SKINS
+title: Skins
 date: 2026-06-05 00:00:00
 tags: skins
 theme: about
 comment: false
 ---
 
-Pick a skin. It is saved locally in this browser.
+Pick a season. It is saved locally in this browser.
 
 <div class="skin-list" role="group" aria-label="Site skins">
-  <button class="skin-option" type="button" data-skin="mono"><strong>Mono</strong><span>plain monochrome archive</span></button>
-  <button class="skin-option" type="button" data-skin="swiss"><strong>Swiss</strong><span>warm paper, black type, small IKB accent</span></button>
-  <button class="skin-option" type="button" data-skin="ink"><strong>Ink</strong><span>near-black page, soft paper text</span></button>
-  <button class="skin-option" type="button" data-skin="warm"><strong>Warm</strong><span>quiet note paper, brown-black ink</span></button>
-  <button class="skin-option" type="button" data-skin="signal"><strong>Signal</strong><span>technical grey-green signal tone</span></button>
+  <button class="skin-option" type="button" data-skin="spring"><strong>Spring</strong><span>green signal, new leaves</span></button>
+  <button class="skin-option" type="button" data-skin="summer"><strong>Summer</strong><span>black ink, long night heat</span></button>
+  <button class="skin-option" type="button" data-skin="autumn"><strong>Autumn</strong><span>warm paper, yellow-brown leaf tone</span></button>
+  <button class="skin-option" type="button" data-skin="winter"><strong>Winter</strong><span>white snow, quiet monochrome</span></button>
 </div>
 
 <script>
 (function () {
   var key = 'yeh-blog-skin';
-  var skins = /^(mono|swiss|ink|warm|signal)$/;
+  var aliases = { mono:'winter', swiss:'winter', ink:'summer', warm:'autumn', signal:'spring' };
+  var skins = /^(spring|summer|autumn|winter)$/;
   var root = document.documentElement;
   var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-skin]'));
 
+  function normalize(skin) {
+    skin = aliases[skin] || skin;
+    return skins.test(skin || '') ? skin : 'winter';
+  }
+
   function current() {
     try {
-      return localStorage.getItem(key) || root.getAttribute('data-theme') || 'swiss';
+      return normalize(localStorage.getItem(key) || root.getAttribute('data-theme') || 'winter');
     } catch (e) {
-      return root.getAttribute('data-theme') || 'swiss';
+      return normalize(root.getAttribute('data-theme') || 'winter');
     }
   }
 
   function apply(skin) {
-    if (!skins.test(skin || '')) skin = 'swiss';
+    skin = normalize(skin);
     root.setAttribute('data-theme', skin);
     try { localStorage.setItem(key, skin); } catch (e) {}
     buttons.forEach(function (button) {

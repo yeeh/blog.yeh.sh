@@ -2,7 +2,7 @@
 layout: null
 ---
 <!DOCTYPE html>
-<html data-theme="{{ site.skin | default: 'swiss' }}">
+<html data-theme="{{ site.skin | default: 'winter' }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -13,8 +13,10 @@ layout: null
 <script>
 (function () {
   try {
+    var aliases = { mono:'winter', swiss:'winter', ink:'summer', warm:'autumn', signal:'spring' };
     var skin = localStorage.getItem('yeh-blog-skin');
-    if (/^(mono|swiss|ink|warm|signal)$/.test(skin || '')) {
+    skin = aliases[skin] || skin;
+    if (/^(spring|summer|autumn|winter)$/.test(skin || '')) {
       document.documentElement.setAttribute('data-theme', skin);
     }
   } catch (e) {}

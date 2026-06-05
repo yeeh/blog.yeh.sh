@@ -27,37 +27,25 @@
   --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
 
-:root[data-theme="mono"] {
-  --bg: #fff;
+:root[data-theme="winter"],
+:root[data-theme="mono"],
+:root[data-theme="swiss"] {
+  color-scheme: light;
+  --bg: #fbfbfa;
   --fg: #111;
   --muted: #666;
   --faint: #999;
-  --line: #e5e5e5;
-  --soft: #f6f6f6;
-  --soft-hover: #eee;
+  --line: #e5e5e2;
+  --soft: #f6f6f4;
+  --soft-hover: #eeeeeb;
   --table-stripe: #fafafa;
-  --table-hover: #f1f1f1;
-  --code-bg: #f7f7f7;
+  --table-hover: #f1f1ef;
+  --code-bg: #f7f7f5;
   --code-fg: #111;
-  --accent: #111;
+  --accent: #7f8a94;
 }
 
-:root[data-theme="swiss"] {
-  color-scheme: light;
-  --bg: #fafaf8;
-  --fg: #0a0a0a;
-  --muted: #525252;
-  --faint: #737373;
-  --line: #d4d4d2;
-  --soft: #f0f0ee;
-  --soft-hover: #e6e6e2;
-  --table-stripe: #f3f3f0;
-  --table-hover: #ecece8;
-  --code-bg: #f0f0ee;
-  --code-fg: #0a0a0a;
-  --accent: #002FA7;
-}
-
+:root[data-theme="summer"],
 :root[data-theme="ink"] {
   color-scheme: dark;
   --bg: #0b0b0a;
@@ -74,6 +62,7 @@
   --accent: #eeeeea;
 }
 
+:root[data-theme="autumn"],
 :root[data-theme="warm"] {
   color-scheme: light;
   --bg: #f7f1e8;
@@ -91,6 +80,7 @@
   --radius-soft: 4px;
 }
 
+:root[data-theme="spring"],
 :root[data-theme="signal"] {
   color-scheme: light;
   --bg: #f8faf7;
