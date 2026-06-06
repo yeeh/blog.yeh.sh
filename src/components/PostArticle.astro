@@ -10,9 +10,7 @@ const showComments = site.comments && page.comment !== false;
     <div class="entry-meta">
       <time class="entry-time" datetime={page.dateXml}>{page.displayDate}</time>
 {page.tags.length > 0 && (
-      <p class="entry-tags">Tags:
-{page.tags.map((tag) => <a href={tagUrl(tag)} rel="tag">#{tag}</a>)}
-      </p>
+      <p class="entry-tags">Tags:{page.tags.map((tag) => <a href={tagUrl(tag)} rel="tag">#{tag}</a>)}</p>
 )}
 {page.comment !== false && <a class="entry-comments" href="#comments" rel="nofollow" title="comments">Comments</a>}
     </div>

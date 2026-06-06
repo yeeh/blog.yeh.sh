@@ -513,10 +513,12 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   align-items: center;
 }
 .side-rss-icon {
+  display: inline-block;
   margin-right: .35em;
   color: #6faa2d;
-  font-size: .72em;
+  font-size: .9em;
   line-height: 1;
+  transform: rotate(45deg);
 }
 .side-copyright {
   display: inline-flex;
