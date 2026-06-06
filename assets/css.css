@@ -249,6 +249,7 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
 .entry-month, .entry-day, .entry-year { display: inline; }
 .entry-month::after, .entry-day::after { content: "."; }
 .entry-comments, .entry-tags { color: var(--muted); font-style: normal; }
+.entry-comments { margin-left: auto; }
 .entry-tags a, .entry-comments {
   color: inherit;
   text-decoration: none;
