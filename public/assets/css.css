@@ -509,6 +509,15 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   margin: 0;
   padding: 0;
 }
+.side-rss {
+  align-items: center;
+}
+.side-rss-icon {
+  margin-right: .35em;
+  color: #6faa2d;
+  font-size: .72em;
+  line-height: 1;
+}
 .side-copyright {
   display: inline-flex;
   align-items: center;
