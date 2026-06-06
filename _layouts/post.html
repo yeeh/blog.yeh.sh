@@ -6,13 +6,6 @@ layout: default
     <h1 class="entry-title">{{ page.title }}</h1>
     <div class="entry-meta">
       <time class="entry-time" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>
-{% if page.categories %}
-      <p class="entry-categories">Categories:
-{% for category in page.categories %}
-        <a rel="tag">{{ category }}</a>
-{% endfor %}
-      </p>
-{% endif %}
 {% if page.tags %}
       <p class="entry-tags">Tags:
 {% for tag in page.tags %}

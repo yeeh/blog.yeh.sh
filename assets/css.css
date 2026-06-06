@@ -232,7 +232,7 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px 14px;
+  gap: 8px 32px;
   margin-top: 14px;
   color: var(--muted);
   font-size: .8125rem;
@@ -248,13 +248,13 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
 }
 .entry-month, .entry-day, .entry-year { display: inline; }
 .entry-month::after, .entry-day::after { content: "."; }
-.entry-comments, .entry-categories, .entry-tags { color: var(--muted); font-style: normal; }
-.entry-categories a, .entry-tags a, .entry-comments {
+.entry-comments, .entry-tags { color: var(--muted); font-style: normal; }
+.entry-tags a, .entry-comments {
   color: inherit;
   text-decoration: none;
 }
-.entry-categories a:hover, .entry-tags a:hover, .entry-comments:hover { color: var(--fg); }
-.entry-categories a:nth-child(n+2)::before, .entry-tags a:nth-child(n+2)::before { content: ""; padding: 0; }
+.entry-tags a:hover, .entry-comments:hover { color: var(--fg); }
+.entry-tags a:nth-child(n+2)::before { content: ""; padding: 0; }
 
 .archive-list {
   display: grid;
