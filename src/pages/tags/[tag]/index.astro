@@ -1,0 +1,32 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ArchiveList from '../../../components/ArchiveList.astro';
+import { getAllTags, getTagBySlug } from '../../../lib/content.js';
+
+export function getStaticPaths() {
+  return getAllTags().map((tag) => ({
+    params: { tag: tag.name },
+    props: { tag },
+  }));
+}
+
+const tag = Astro.props.tag || getTagBySlug(Astro.params.tag);
+const posts = tag.posts;
+const page = { title: `Tag: ${tag.name}`, url: tag.url, tags: [tag.name] };
+const pagination = {
+  page: 1,
+  totalPages: 1,
+  posts,
+  previousPage: null,
+  nextPage: null,
+};
+---
+<Base title={`Tag: ${tag.name}`} page={page}>
+<article class="entry" role="article">
+  <header class="entry-header">
+    <h1 class="entry-title">#{tag.name}</h1>
+    <div class="entry-meta">{tag.count} posts</div>
+  </header>
+</article>
+<ArchiveList pagination={pagination} />
+</Base>

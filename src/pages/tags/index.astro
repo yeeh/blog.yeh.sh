@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getAllTags } from '../../lib/content.js';
+
+const tags = getAllTags();
+const page = { title: 'Tags', url: '/tags/' };
+---
+<Base title="Tags" page={page}>
+<article class="entry" role="article">
+  <header class="entry-header">
+    <h1 class="entry-title">Tags</h1>
+  </header>
+  <div class="tag-list">
+    {tags.map((tag) => (
+      <a href={tag.url} rel="tag">
+        <span>#{tag.name}</span>
+        <small>{tag.count}</small>
+      </a>
+    ))}
+  </div>
+</article>
+</Base>

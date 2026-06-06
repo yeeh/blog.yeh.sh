@@ -315,6 +315,35 @@ code, kbd, pre, samp { font-family: var(--mono), var(--mono-fallback); font-size
 .archive-meta a { color: inherit; text-decoration: none; }
 .archive-meta a:hover { color: var(--fg); }
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  padding-top: 8px;
+}
+.tag-list a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  color: var(--muted);
+  font-family: var(--mono), var(--mono-fallback);
+  font-size: .875rem;
+  text-decoration: none;
+}
+.tag-list a:hover {
+  border-color: var(--accent);
+  background: var(--soft);
+  color: var(--fg);
+}
+.tag-list small {
+  color: var(--faint);
+  font-size: .72rem;
+}
+
 .entry-content {
   color: var(--fg);
   font-size: 1.0625rem;

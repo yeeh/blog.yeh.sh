@@ -1,5 +1,5 @@
 ---
-import { site } from '../lib/content.js';
+import { site, tagUrl } from '../lib/content.js';
 const { page } = Astro.props;
 const showPostPagination = page.url?.includes('/post/') && page.theme !== 'about';
 const showComments = site.comments && page.comment !== false;
@@ -11,7 +11,7 @@ const showComments = site.comments && page.comment !== false;
       <time class="entry-time" datetime={page.dateXml}>{page.displayDate}</time>
 {page.tags.length > 0 && (
       <p class="entry-tags">Tags:
-{page.tags.map((tag) => <a rel="tag">#{tag}</a>)}
+{page.tags.map((tag) => <a href={tagUrl(tag)} rel="tag">#{tag}</a>)}
       </p>
 )}
 {page.comment !== false && <a class="entry-comments" href="#comments" rel="nofollow" title="comments">Comments</a>}

@@ -176,6 +176,38 @@ export function paginate(posts, page, perPage = 10) {
   };
 }
 
+export function tagSlug(tag) {
+  return encodeURIComponent(String(tag));
+}
+
+export function tagUrl(tag) {
+  return `/tags/${tagSlug(tag)}/`;
+}
+
+export function getAllTags() {
+  const map = new Map();
+  for (const post of getPosts()) {
+    for (const tag of post.tags) {
+      const item = map.get(tag) || { name: tag, slug: tagSlug(tag), url: tagUrl(tag), count: 0, posts: [] };
+      item.count += 1;
+      item.posts.push(post);
+      map.set(tag, item);
+    }
+  }
+  return Array.from(map.values()).sort((a, b) =>
+    b.count - a.count || a.name.localeCompare(b.name, 'zh-Hans-CN')
+  );
+}
+
+export function getTagBySlug(slug) {
+  const decoded = decodeURIComponent(String(slug));
+  return getAllTags().find((tag) => tag.name === decoded || tag.slug === slug) || null;
+}
+
+export function getPostsByTag(tagName) {
+  return getPosts().filter((post) => post.tags.includes(tagName));
+}
+
 export function cdata(s) {
   return String(s).replaceAll(']]>', ']]]]><![CDATA[>');
 }

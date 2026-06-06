@@ -4,6 +4,7 @@ const { title = site.name, page = {}, pagination = null } = Astro.props;
 const isHome = pagination?.page === 1;
 const isAbout = page.theme === 'about' && page.url !== '/about/skins.html';
 const isSkins = page.url === '/about/skins.html';
+const isTags = page.url?.startsWith('/tags/');
 const showLinks = isHome;
 ---
 <!DOCTYPE html>
@@ -44,6 +45,7 @@ const showLinks = isHome;
 <a href="/" class:list={[pagination?.page === 1 && 'selected']}>Index</a>
 <a href="/about/" class:list={[isAbout && 'selected']}>About</a>
 <a href="/about/skins.html" class:list={[isSkins && 'selected']}>Skins</a>
+<a href="/tags/" class:list={[isTags && 'selected']}>Tags</a>
 <a href="/rss.xml" rel="feed">RSS</a>
 </nav>
 <div class="search layout" role="search">

@@ -1,4 +1,5 @@
 ---
+import { tagUrl } from '../lib/content.js';
 const { pagination } = Astro.props;
 ---
 <div class="archive-list">
@@ -10,7 +11,7 @@ const { pagination } = Astro.props;
       <p class="archive-summary">{post.summary}</p>
       {post.tags.length > 0 && (
       <div class="archive-meta">
-        {post.tags.map((tag) => <a rel="tag">#{tag}</a>)}
+        {post.tags.map((tag) => <a href={tagUrl(tag)} rel="tag">#{tag}</a>)}
       </div>
       )}
     </div>
