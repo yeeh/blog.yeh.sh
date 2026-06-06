@@ -512,7 +512,9 @@ dd { margin-left: 1.2rem; color: var(--muted); }
 .rss {
   align-items: center;
 }
-.rss:hover {
+.rss:hover,
+.copyright a:hover {
+  color: #6faa2d;
   text-decoration: none;
 }
 .rss-icon {
@@ -585,21 +587,6 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   font-size: 1rem;
 }
 
-.footer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 12px;
-  margin-top: 72px;
-  padding: 22px 0 34px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: .8125rem;
-}
-.footer a { color: inherit; text-decoration: none; }
-.footer a:hover { color: var(--fg); text-decoration: underline; }
-.footer .yeh { display: inline-flex; align-items: center; }
-.footer .yeh img { width: 16px; height: 16px; }
 .hidden { display: none; }
 embed { display: none; }
 
@@ -692,8 +679,6 @@ embed { display: none; }
   }
   .archive-date { padding-top: 0; }
   .footer {
-    flex-wrap: wrap;
-    justify-content: flex-start;
     margin-top: 56px;
   }
 }
