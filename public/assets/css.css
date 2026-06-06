@@ -506,14 +506,16 @@ dd { margin-left: 1.2rem; color: var(--muted); }
 }
 .footer-menu a {
   display: inline-flex;
+  align-items: center;
   margin: 0;
   padding: 0;
+  line-height: 1;
 }
 .rss {
   align-items: center;
 }
-.rss:hover,
-.copyright a:hover {
+.footer .rss:hover,
+.footer .copyright a:hover {
   color: #6faa2d;
   text-decoration: none;
 }
