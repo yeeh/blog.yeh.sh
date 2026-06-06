@@ -1,0 +1,73 @@
+---
+import { site } from '../lib/content.js';
+const { page } = Astro.props;
+const showPostPagination = page.url?.includes('/post/') && page.theme !== 'about';
+const showComments = site.comments && page.comment !== false;
+---
+<article class="entry" role="article">
+  <header class="entry-header">
+    <h1 class="entry-title">{page.title}</h1>
+    <div class="entry-meta">
+      <time class="entry-time" datetime={page.dateXml}>{page.displayDate}</time>
+{page.tags.length > 0 && (
+      <p class="entry-tags">Tags:
+{page.tags.map((tag) => <a rel="tag">#{tag}</a>)}
+      </p>
+)}
+{page.comment !== false && <a class="entry-comments" href="#comments" rel="nofollow" title="comments">Comments</a>}
+    </div>
+  </header>
+  <div class="entry-content" set:html={page.html} />
+</article>
+{page.url?.includes('/post/') && (
+<script is:inline>
+  document.querySelectorAll('.entry-content img').forEach(function (img) {
+    var imageLink = img.closest('a');
+
+    if (imageLink) {
+      imageLink.target = '_blank';
+      if (!/noopener/.test(imageLink.rel)) {
+        imageLink.rel = (imageLink.rel ? imageLink.rel + ' ' : '') + 'noopener';
+      }
+      return;
+    }
+
+    var link = document.createElement('a');
+    link.href = img.currentSrc || img.src;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    img.style.cursor = 'zoom-in';
+    img.parentNode.insertBefore(link, img);
+    link.appendChild(img);
+  });
+</script>
+)}
+{showPostPagination && (
+<footer class="pagination" role="navigation">
+{page.next && <a class="pagination-next" href={page.next.url} title={page.next.title}>&lt;&lt;{page.next.title}</a>}
+{page.previous && <a class="pagination-prev" href={page.previous.url} title={page.previous.title}>{page.previous.title}&gt;&gt;</a>}
+</footer>
+)}
+{showComments && (
+<>
+<meta property="og:title" content="giscus" />
+<div id="comments">
+    <script src="https://giscus.app/client.js"
+            data-repo="yeeh/blog.yeh.sh"
+            data-repo-id="MDEwOlJlcG9zaXRvcnkxMDg2MTA1NA=="
+            data-category="General"
+            data-category-id="DIC_kwDOAKW5_s4CQ-D5"
+            data-mapping="url"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+</>
+)}

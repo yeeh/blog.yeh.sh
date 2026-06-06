@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostArticle from '../../components/PostArticle.astro';
+import { getAboutPage } from '../../lib/content.js';
+const page = getAboutPage('link');
+---
+<Base title={page.title} page={page}>
+<PostArticle page={page} />
+</Base>

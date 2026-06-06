@@ -1,0 +1,15 @@
+---
+import Base from '../../../../../layouts/Base.astro';
+import PostArticle from '../../../../../components/PostArticle.astro';
+import { getPosts } from '../../../../../lib/content.js';
+export function getStaticPaths() {
+  return getPosts().map((post) => {
+    const [, , year, month, day, slugExt] = post.url.split('/');
+    return { params: { year, month, day, slug: slugExt.replace(/\.html$/, '') }, props: { page: post } };
+  });
+}
+const { page } = Astro.props;
+---
+<Base title={page.title} page={page}>
+<PostArticle page={page} />
+</Base>

@@ -1,0 +1,14 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ArchiveList from '../../../components/ArchiveList.astro';
+import { getPosts, paginate } from '../../../lib/content.js';
+export function getStaticPaths() {
+  const totalPages = Math.ceil(getPosts().length / 10);
+  return Array.from({ length: totalPages - 1 }, (_, i) => ({ params: { page: String(i + 2) } }));
+}
+const pagination = paginate(getPosts(), Number(Astro.params.page));
+const page = { title: 'BLOG', url: `/page/${pagination.page}/` };
+---
+<Base title="BLOG" page={page} pagination={pagination}>
+<ArchiveList pagination={pagination} />
+</Base>

@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import ArchiveList from '../components/ArchiveList.astro';
+import { getPosts, paginate } from '../lib/content.js';
+const pagination = paginate(getPosts(), 1);
+const page = { title: 'BLOG', url: '/' };
+---
+<Base title="BLOG" page={page} pagination={pagination}>
+<ArchiveList pagination={pagination} />
+</Base>

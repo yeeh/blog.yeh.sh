@@ -1,0 +1,86 @@
+---
+import { site } from '../lib/content.js';
+const { title = site.name, page = {}, pagination = null } = Astro.props;
+const isHome = pagination?.page === 1;
+const isAbout = page.theme === 'about' && page.url !== '/about/skins.html';
+const isSkins = page.url === '/about/skins.html';
+const showLinks = isHome;
+---
+<!DOCTYPE html>
+<html data-theme={site.skin}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta name="keywords" content={`${page.tags?.join(',') || ''}${site.keywords}`}>
+<meta name="description" content={`${page.title ? `${page.title}.` : ''} ${site.description}`}>
+<title>{title} &middot; {site.name}</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script is:inline>
+(function () {
+  try {
+    var aliases = { mono:'winter', swiss:'winter', ink:'summer', warm:'autumn', signal:'spring' };
+    var skin = localStorage.getItem('yeh-blog-skin');
+    skin = aliases[skin] || skin;
+    if (/^(spring|summer|autumn|winter)$/.test(skin || '')) {
+      document.documentElement.setAttribute('data-theme', skin);
+    }
+  } catch (e) {}
+}());
+</script>
+<link rel="stylesheet" type="text/css" href="/assets/css.css">
+<link rel="alternate" type="application/rss+xml" href="/rss.xml">
+</head>
+<body>
+<header class="header layout">
+<h1>
+<a class="sitetitle" href="/" title={site.name} rel="home">{site.name}</a>
+</h1>
+<span class="tagline">{site.tagline}</span>
+</header>
+<nav class="nav layout" role="navigation">
+<a href="/" class:list={[pagination?.page === 1 && 'selected']}>Index</a>
+<a href="/about/" class:list={[isAbout && 'selected']}>About</a>
+<a href="/about/skins.html" class:list={[isSkins && 'selected']}>Skins</a>
+<a href="/rss.xml" rel="feed">RSS</a>
+</nav>
+<div class="search layout" role="search">
+<form action="https://cse.google.com/cse" id="cse-search-box" target="_blank" method="get">
+    <input type="hidden" name="cx" value="partner-pub-9632487167722126:3933851880" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="search" name="q" placeholder="Search" accesskey="s" lang="zh-cn" autocomplete="off" x-webkit-speech webkit-grammar="builtin:translate" />
+</form>
+</div>
+<div class="content layout">
+<slot />
+</div>
+{showLinks ? (
+<div class="link layout">
+<h6>Links</h6>
+<a target="_blank" title="聚友" href="http://www.juyo.org/">聚友</a>
+<a target="_blank" title="password generator" href="https://www.passid.org/">密码生成器</a>
+    <nav class="side-menu" aria-label="Footer navigation">
+        <span class="side-copyright">&copy; <a href={site.urlyeh} title="Yeh" target="_blank" rel="author"><img alt="Yeh" src="/favicon.ico" /></a></span>
+    </nav>
+</div>
+) : (
+<div class="links layout">
+<h6>Sponsors</h6>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9632487167722126"
+     data-ad-slot="9943771089"
+     data-ad-format="auto"></ins>
+<script is:inline>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <nav class="side-menu" aria-label="Footer navigation">
+        <span class="side-copyright">&copy; <a href={site.urlyeh} title="Yeh" target="_blank" rel="author"><img alt="Yeh" src="/favicon.ico" /></a></span>
+    </nav>
+</div>
+)}
+</body>
+</html>
