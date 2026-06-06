@@ -586,9 +586,10 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   content: " ✔\FE0E";
   color: #6faa2d;
   font-family: var(--mono);
-  font-size: 1.25em;
+  font-size: 2em;
   font-weight: 700;
-  vertical-align: -0.05em;
+  line-height: 1;
+  vertical-align: -0.15em;
 }
 
 .hidden { display: none; }
