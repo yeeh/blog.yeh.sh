@@ -136,8 +136,8 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
 .header h1 { font-size: 1rem; line-height: 1; }
 .sitetitle {
   font-size: clamp(1.5rem, 2.6vw, 2.2rem);
-  font-weight: 520;
-  letter-spacing: -.035em;
+  font-weight: 400;
+  letter-spacing: -.04em;
   text-decoration: none;
 }
 .sitetitle::after {
@@ -221,9 +221,9 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
 .entry-title {
   color: var(--fg);
   font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 500;
+  font-weight: 380;
   line-height: 1.02;
-  letter-spacing: -.035em;
+  letter-spacing: -.045em;
   text-wrap: balance;
 }
 .entry-title a { text-decoration: none; }
@@ -278,7 +278,7 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
 }
 .archive-title {
   font-size: clamp(1.35rem, 2.6vw, 2.25rem);
-  font-weight: 500;
+  font-weight: 420;
   line-height: 1.12;
   letter-spacing: -.03em;
 }
@@ -325,7 +325,7 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
 .entry-content h6 {
   margin-top: 2.6rem;
   color: var(--fg);
-  font-weight: 520;
+  font-weight: 420;
   line-height: 1.18;
   letter-spacing: -.025em;
   text-wrap: balance;
