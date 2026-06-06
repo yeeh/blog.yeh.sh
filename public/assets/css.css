@@ -263,6 +263,9 @@ code, kbd, pre, samp { font-family: var(--mono), var(--mono-fallback); font-size
   color: inherit;
   text-decoration: none;
 }
+.entry-tags a {
+  margin-left: .55em;
+}
 .entry-tags a:hover, .entry-comments:hover { color: var(--fg); }
 .entry-tags a:nth-child(n+2)::before { content: ""; padding: 0; }
 

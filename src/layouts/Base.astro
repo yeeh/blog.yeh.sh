@@ -43,10 +43,9 @@ const showLinks = isHome;
 </header>
 <nav class="nav layout" role="navigation">
 <a href="/" class:list={[pagination?.page === 1 && 'selected']}>Index</a>
-<a href="/about/" class:list={[isAbout && 'selected']}>About</a>
-<a href="/about/skins.html" class:list={[isSkins && 'selected']}>Skins</a>
 <a href="/tags/" class:list={[isTags && 'selected']}>Tags</a>
-<a href="/rss.xml" rel="feed">RSS</a>
+<a href="/about/skins.html" class:list={[isSkins && 'selected']}>Skins</a>
+<a href="/about/" class:list={[isAbout && 'selected']}>About</a>
 </nav>
 <div class="search layout" role="search">
 <form action="https://cse.google.com/cse" id="cse-search-box" target="_blank" method="get">
@@ -64,7 +63,7 @@ const showLinks = isHome;
 <a target="_blank" title="聚友" href="http://www.juyo.org/">聚友</a>
 <a target="_blank" title="password generator" href="https://www.passid.org/">密码生成器</a>
     <nav class="side-menu" aria-label="Footer navigation">
-        <span class="side-copyright">&copy; <a href={site.urlyeh} title="Yeh" target="_blank" rel="author"><img alt="Yeh" src="/favicon.ico" /></a></span>
+        <a class="side-rss" href="/rss.xml" rel="feed">RSS</a><span class="side-copyright">&copy; <a href={site.urlyeh} title="Yeh" target="_blank" rel="author"><img alt="Yeh" src="/favicon.ico" /></a></span>
     </nav>
 </div>
 ) : (
@@ -80,7 +79,7 @@ const showLinks = isHome;
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
     <nav class="side-menu" aria-label="Footer navigation">
-        <span class="side-copyright">&copy; <a href={site.urlyeh} title="Yeh" target="_blank" rel="author"><img alt="Yeh" src="/favicon.ico" /></a></span>
+        <a class="side-rss" href="/rss.xml" rel="feed">RSS</a><span class="side-copyright">&copy; <a href={site.urlyeh} title="Yeh" target="_blank" rel="author"><img alt="Yeh" src="/favicon.ico" /></a></span>
     </nav>
 </div>
 )}
