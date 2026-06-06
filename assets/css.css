@@ -248,7 +248,14 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
 }
 .entry-month, .entry-day, .entry-year { display: inline; }
 .entry-month::after, .entry-day::after { content: "."; }
-.entry-comments, .entry-tags { color: var(--muted); font-style: normal; }
+.entry-comments, .entry-tags {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: .78rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: .01em;
+}
 .entry-comments { margin-left: auto; }
 .entry-tags a, .entry-comments {
   color: inherit;
