@@ -132,7 +132,7 @@ function itemFromFile(file, kind) {
     tags: normalizeList(data.tags),
     categories: normalizeList(data.categories),
     theme: data.theme,
-    comment: data.comment,
+    comment: data.comment === 'false' ? false : data.comment,
     url,
     html,
     rawContent: content,

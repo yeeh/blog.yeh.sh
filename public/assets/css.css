@@ -582,14 +582,21 @@ dd { margin-left: 1.2rem; color: var(--muted); }
 .skin-option[aria-pressed="true"] strong {
   color: var(--accent);
 }
+.skin-option[aria-pressed="true"] span {
+  position: relative;
+}
 .skin-option[aria-pressed="true"] span::after {
-  content: " ✔\FE0E";
+  content: "✔\FE0E";
+  position: absolute;
+  top: 50%;
+  margin-left: 0.4em;
+  transform: translateY(-50%);
   color: #6faa2d;
   font-family: var(--mono);
   font-size: 2em;
   font-weight: 700;
   line-height: 1;
-  vertical-align: -0.15em;
+  pointer-events: none;
 }
 
 .hidden { display: none; }
