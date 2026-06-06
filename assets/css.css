@@ -524,8 +524,8 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   color: var(--accent);
 }
 .skin-option[aria-pressed="true"] span::after {
-  content: " / active";
-  color: var(--faint);
+  content: " ✔️";
+  color: #6faa2d;
   font-family: var(--mono);
   font-size: .78rem;
 }
