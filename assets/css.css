@@ -24,7 +24,8 @@
   --side: 220px;
   --gap: clamp(32px, 7vw, 96px);
   --sans: "Inter", "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
-  --mono: "JetBrains Mono", "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", ui-monospace, monospace;
+  --mono: "JetBrains Mono";
+  --mono-fallback: "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", ui-monospace, monospace;
 }
 
 :root[data-theme="winter"],
@@ -118,7 +119,7 @@ img { max-width: 100%; height: auto; }
 small { font-size: .8125rem; }
 strong, b { font-weight: 650; }
 em { font-style: italic; }
-code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
+code, kbd, pre, samp { font-family: var(--mono), var(--mono-fallback); font-size: .92em; }
 
 .layout {
   width: min(calc(100% - 40px), var(--max));
@@ -167,7 +168,7 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
   color: var(--muted);
-  font-family: var(--mono);
+  font-family: var(--mono), var(--mono-fallback);
   font-size: .875rem;
   font-weight: 500;
   letter-spacing: .01em;
@@ -210,7 +211,7 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
   left: 17px;
   transform: translateY(-53%);
   color: var(--faint);
-  font: 1.2rem/1 var(--mono);
+  font: 1.2rem/1 var(--mono), var(--mono-fallback);
 }
 
 .content {
@@ -242,7 +243,7 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
 }
 .entry-time {
   color: var(--muted);
-  font-family: var(--mono);
+  font-family: var(--mono), var(--mono-fallback);
   font-size: .78rem;
   font-weight: 500;
   letter-spacing: .01em;
@@ -251,7 +252,7 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
 .entry-month::after, .entry-day::after { content: "."; }
 .entry-comments, .entry-tags {
   color: var(--muted);
-  font-family: var(--mono);
+  font-family: var(--mono), var(--mono-fallback);
   font-size: .78rem;
   font-style: normal;
   font-weight: 500;
@@ -279,7 +280,7 @@ code, kbd, pre, samp { font-family: var(--mono); font-size: .92em; }
 .archive-date {
   padding-top: .28em;
   color: var(--muted);
-  font-family: var(--mono);
+  font-family: var(--mono), var(--mono-fallback);
   font-size: .8125rem;
   font-weight: 500;
   line-height: 1.4;
@@ -507,7 +508,7 @@ dd { margin-left: 1.2rem; color: var(--muted); }
 }
 .skin-option strong {
   color: var(--fg);
-  font-family: var(--mono);
+  font-family: var(--mono), var(--mono-fallback);
   font-size: .8125rem;
   font-weight: 500;
   letter-spacing: .04em;
@@ -524,9 +525,9 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   color: var(--accent);
 }
 .skin-option[aria-pressed="true"] span::after {
-  content: " ✔️";
+  content: " ✔";
   color: #6faa2d;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: .78rem;
 }
 
