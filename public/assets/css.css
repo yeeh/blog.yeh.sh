@@ -519,7 +519,7 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   align-items: center;
 }
 .footer .rss:hover,
-.footer .copyright a:hover {
+.footer .copyright:hover {
   color: #6faa2d;
   text-decoration: none;
 }
@@ -539,11 +539,6 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   margin-top: 0;
   color: var(--faint);
   font-size: 1.1rem;
-}
-.copyright a {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
 }
 .copyright img {
   display: block;
