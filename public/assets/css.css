@@ -525,7 +525,6 @@ dd { margin-left: 1.2rem; color: var(--muted); }
 }
 .rss-icon {
   display: inline-block;
-  margin-left: .35em;
   color: #6faa2d;
   font-size: 1.6em;
   font-weight: bolder;
