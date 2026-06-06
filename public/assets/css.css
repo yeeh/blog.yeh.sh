@@ -648,8 +648,7 @@ embed { display: none; }
     padding: 0;
   }
   .search input { height: 38px; }
-  .content,
-  .footer {
+  .content {
     width: min(var(--content), calc(100% - var(--side) - var(--gap)));
     margin-left: calc((100vw - min(calc(100vw - 80px), var(--max))) / 2);
     margin-right: calc(var(--side) + var(--gap));
