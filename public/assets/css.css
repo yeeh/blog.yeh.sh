@@ -528,7 +528,6 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   margin-top: -2px;
   color: #6faa2d;
   font-size: 1.6em;
-  font-weight: bolder;
   line-height: 1;
   transform: rotate(36deg);
 }
@@ -541,7 +540,7 @@ dd { margin-left: 1.2rem; color: var(--muted); }
   font-size: 1.1rem;
 }
 .copyright img {
-  margin-top: -4px;
+  margin-top: -2px;
   width: 16px;
   height: 16px;
 }
