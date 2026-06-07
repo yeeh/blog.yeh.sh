@@ -15,11 +15,5 @@ theme: about
 - 本站[友情链接](link.html)
 - 本站[历史记录](log.html)
 - 本站[隐私条款](privacy.html)
-
-本站 favicon：
-
-<a href="https://yeh.sh/favicon.ico" target="_blank" rel="noopener"><img src="https://yeh.sh/favicon.ico" alt="本站 favicon" /></a>
-
-本站 logo：
-
-<a href="https://yeh.sh/logo.png" target="_blank" rel="noopener"><img src="https://yeh.sh/logo.png" alt="本站 logo" /></a>
+- 本站 favicon：<a href="https://yeh.sh/favicon.ico" target="_blank" rel="noopener"><img src="https://yeh.sh/favicon.ico" alt="本站 favicon" /></a>
+- 本站 logo：<a href="https://yeh.sh/logo.png" target="_blank" rel="noopener"><img src="https://yeh.sh/logo.png" alt="本站 logo" /></a>
