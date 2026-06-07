@@ -3,17 +3,20 @@ import { site, tagUrl } from '../lib/content.js';
 const { page } = Astro.props;
 const showPostPagination = page.url?.includes('/post/') && page.theme !== 'about';
 const showComments = site.comments && page.comment !== false;
+const hasMeta = page.date || page.tags.length > 0 || page.comment !== false;
 ---
 <article class="entry" role="article">
   <header class="entry-header">
     <h1 class="entry-title">{page.title}</h1>
+{hasMeta && (
     <div class="entry-meta">
-      <time class="entry-time" datetime={page.dateXml}>{page.displayDate}</time>
+{page.date && <time class="entry-time" datetime={page.dateXml}>{page.displayDate}</time>}
 {page.tags.length > 0 && (
       <p class="entry-tags">Tags:{page.tags.map((tag) => <a href={tagUrl(tag)} rel="tag">#{tag}</a>)}</p>
 )}
 {page.comment !== false && <a class="entry-comments" href="#comments" rel="nofollow" title="comments">Comments</a>}
     </div>
+)}
   </header>
   <div class="entry-content" set:html={page.html} />
 </article>

@@ -103,8 +103,8 @@ function itemFromFile(file, kind) {
   const raw = fs.readFileSync(file, 'utf8');
   const parsed = parseFrontmatter(raw);
   const data = parsed.data;
-  const date = parseDate(data.date);
-  const p = utcParts(date);
+  const date = data.date ? parseDate(data.date) : null;
+  const p = date ? utcParts(date) : null;
   const slug = slugFromFile(file);
   const content = preprocess(parsed.content);
   const html = md.render(content);
@@ -117,8 +117,8 @@ function itemFromFile(file, kind) {
     slug,
     title: data.title || slug,
     date,
-    dateXml: dateXml(date),
-    displayDate: displayDate(date),
+    dateXml: date ? dateXml(date) : null,
+    displayDate: date ? displayDate(date) : null,
     tags: normalizeList(data.tags),
     categories: normalizeList(data.categories),
     theme: data.theme,

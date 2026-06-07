@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Skins
-date: 2026-06-05 00:00:00
 tags: skins
 theme: about
 comment: false
