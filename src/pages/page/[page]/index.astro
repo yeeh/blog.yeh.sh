@@ -7,8 +7,8 @@ export function getStaticPaths() {
   return Array.from({ length: totalPages - 1 }, (_, i) => ({ params: { page: String(i + 2) } }));
 }
 const pagination = paginate(getPosts(), Number(Astro.params.page));
-const page = { title: 'BLOG', url: `/page/${pagination.page}/` };
+const page = { url: `/page/${pagination.page}/` };
 ---
-<Base title="BLOG" page={page} pagination={pagination}>
+<Base page={page} pagination={pagination}>
 <ArchiveList pagination={pagination} />
 </Base>

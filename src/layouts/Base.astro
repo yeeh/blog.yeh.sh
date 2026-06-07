@@ -6,7 +6,7 @@ const isAbout = page.theme === 'about' && page.url !== '/about/skins.html';
 const isSkins = page.url === '/about/skins.html';
 const isTags = page.url?.startsWith('/tags/');
 const showLinks = isHome;
-const documentTitle = isHome ? site.name : `${title} · ${site.name}`;
+const documentTitle = !title || title === site.name ? site.name : `${title} · ${site.name}`;
 ---
 <!DOCTYPE html>
 <html data-theme={site.skin}>

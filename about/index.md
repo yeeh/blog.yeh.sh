@@ -10,7 +10,7 @@ theme: about
 
 - [互联网足迹](https://yeh.sh/)
 - [友情链接](link.html)
-- [历史记录](log.html)
+- [日志](log.html)
 - [隐私条款](privacy.html)
 - favicon：<a href="https://yeh.sh/favicon.ico" target="_blank" rel="noopener"><img src="https://yeh.sh/favicon.ico" alt="favicon" /></a>
 - logo：<a href="https://yeh.sh/logo.png" target="_blank" rel="noopener"><img src="https://yeh.sh/logo.png" alt="logo" /></a>
