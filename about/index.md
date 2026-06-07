@@ -8,7 +8,7 @@ theme: about
 
 常用网名：叶子，Perry Yeh
 
-- [日志](log.html)
+- [本站日志](log.html)
 - [友情链接](link.html)
 - [隐私条款](privacy.html)
 - favicon：<a href="https://yeh.sh/favicon.ico" target="_blank" rel="noopener"><img src="https://yeh.sh/favicon.ico" alt="favicon" /></a>
