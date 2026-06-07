@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Skins
-tags: skins
 theme: about
 comment: false
 ---
