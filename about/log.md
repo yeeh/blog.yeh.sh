@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 日志
+title: 本站日志
 date: 2026-6-6 00:00:00
 tags: 日志
 theme: about
