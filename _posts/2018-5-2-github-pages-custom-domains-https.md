@@ -3,7 +3,7 @@ layout: post
 title: github pages custom domains自有域名支持https
 date: 2018-05-01 11:10:00
 categories: 闲
-tags: github pages custom domains https
+tags: github pages custom domain https
 ---
 
 > 先简介一下blog三件套

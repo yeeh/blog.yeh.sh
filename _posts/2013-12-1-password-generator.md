@@ -3,7 +3,7 @@ layout: post
 title: 密码生成器passid.org
 date: 2013-11-30 15:10:09
 categories: 手
-tags: 密码,密码生成器,在线密码生成器,passid.org,password-generator
+tags: 密码生成器,passid.org
 ---
 
 一晃2个多月没写blog了，皆因我家叶子小盆友出生忙的人仰马翻，今天把之前挖的坑填上，带来个新鲜小工具第一版，[密码生成器](http://www.passid.org)，网址是[www.passid.org](http://www.passid.org)。
