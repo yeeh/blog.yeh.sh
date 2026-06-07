@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 那些抛弃的app
-date: 2017-8-20 21:22:00 +0800
+date: 2017-08-20 21:22:00
 categories: 好
 tags: 抛弃 app
 ---

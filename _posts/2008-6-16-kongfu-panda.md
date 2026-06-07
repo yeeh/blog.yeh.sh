@@ -1,7 +1,7 @@
 ---
 layout: post
 title: yesterday is history, tomorrow is mystery, today is a gift, thats why  it called present.
-date: 2008-06-16 00:36:03 +0800
+date: 2008-06-15 00:36:03
 categories: 闲
 ---
 大概是开博以来，最长的一次标题了。来源是最近很火的kungfu panda（功夫熊猫），master 乌龟（我想起了龟仙人）说的。后来去google了下，发现这句话真是历史悠久，不过惭愧，我这是第一次听到。字面翻译就是：

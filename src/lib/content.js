@@ -16,8 +16,6 @@ export const site = {
 
 const root = process.cwd();
 const md = new MarkdownIt({ html: true, linkify: false, typographer: false });
-const siteTimeZone = 'Asia/Shanghai';
-const routeTimeZone = 'America/Los_Angeles';
 
 const linkContent = '<a target="_blank" title="聚友" href="http://www.juyo.org/">聚友</a>\n<a target="_blank" title="password generator" href="https://www.passid.org/">密码生成器</a>\n';
 
@@ -53,51 +51,35 @@ function parseDate(value) {
   const s = String(value).trim();
   const m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})(?:[ T](\d{1,2}):(\d{2})(?::(\d{2}))?)?(?:\s*([+-]\d{4}))?$/);
   if (!m) return new Date(s);
-  const [, y, mo, d, h = '0', mi = '0', sec = '0', off = '+0800'] = m;
+  const [, y, mo, d, h = '0', mi = '0', sec = '0', off] = m;
   let ms = Date.UTC(+y, +mo - 1, +d, +h, +mi, +sec);
-  const sign = off[0] === '+' ? 1 : -1;
-  const offMin = sign * (+off.slice(1, 3) * 60 + +off.slice(3, 5));
-  ms -= offMin * 60000;
+  if (off) {
+    const sign = off[0] === '+' ? 1 : -1;
+    const offMin = sign * (+off.slice(1, 3) * 60 + +off.slice(3, 5));
+    ms -= offMin * 60000;
+  }
   return new Date(ms);
 }
 
-function partsInTimeZone(date, timeZone) {
-  const parts = new Intl.DateTimeFormat('en-US', {
-    timeZone,
-    year: 'numeric', month: '2-digit', day: '2-digit',
-    hour: '2-digit', minute: '2-digit', second: '2-digit',
-    hour12: false,
-  }).formatToParts(date);
-  const o = Object.fromEntries(parts.filter(p => p.type !== 'literal').map(p => [p.type, p.value]));
-  if (o.hour === '24') o.hour = '00';
-  return o;
-}
-
-function siteParts(date) {
-  return partsInTimeZone(date, siteTimeZone);
-}
-
-function routeParts(date) {
-  return partsInTimeZone(date, routeTimeZone);
-}
-
-function siteOffset(date) {
-  const p = siteParts(date);
-  const asUtc = Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour, +p.minute, +p.second);
-  const diff = Math.round((asUtc - date.getTime()) / 60000);
-  const sign = diff >= 0 ? '+' : '-';
-  const abs = Math.abs(diff);
-  return `${sign}${String(Math.floor(abs / 60)).padStart(2, '0')}:${String(abs % 60).padStart(2, '0')}`;
+function utcParts(date) {
+  return {
+    year: String(date.getUTCFullYear()),
+    month: String(date.getUTCMonth() + 1).padStart(2, '0'),
+    day: String(date.getUTCDate()).padStart(2, '0'),
+    hour: String(date.getUTCHours()).padStart(2, '0'),
+    minute: String(date.getUTCMinutes()).padStart(2, '0'),
+    second: String(date.getUTCSeconds()).padStart(2, '0'),
+  };
 }
 
 export function dateXml(date) {
-  const p = siteParts(date);
-  return `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}:${p.second}${siteOffset(date)}`;
+  const p = utcParts(date);
+  return `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}:${p.second}+00:00`;
 }
 
 export function displayDate(date) {
   return new Intl.DateTimeFormat('en-US', {
-    timeZone: siteTimeZone, month: 'short', day: 'numeric', year: 'numeric'
+    timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric'
   }).format(date);
 }
 
@@ -122,7 +104,7 @@ function itemFromFile(file, kind) {
   const parsed = parseFrontmatter(raw);
   const data = parsed.data;
   const date = parseDate(data.date);
-  const p = kind === 'post' ? routeParts(date) : siteParts(date);
+  const p = utcParts(date);
   const slug = slugFromFile(file);
   const content = preprocess(parsed.content);
   const html = md.render(content);

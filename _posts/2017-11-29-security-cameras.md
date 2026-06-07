@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 瞎扯监控摄像头
-date: 2017-11-29 18:10:00 +0800
+date: 2017-11-29 18:10:00
 categories: 好
 tags: security cameras 监控 摄像头
 ---

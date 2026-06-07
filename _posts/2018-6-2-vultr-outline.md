@@ -1,7 +1,7 @@
 ---
 layout: post
 title: vultr安装outline
-date: 2018-6-2 23:02:00 +0800
+date: 2018-06-02 23:02:00
 categories: 闲
 tags: vultr outline
 ---

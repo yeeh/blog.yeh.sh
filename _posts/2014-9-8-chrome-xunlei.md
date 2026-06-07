@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 迅雷远程chrome插件
-date: 2014-9-8 22:25:00 +0800
+date: 2014-09-08 22:25:00
 categories: 手
 tags: chrome 插件 迅雷 远程 下载
 ---

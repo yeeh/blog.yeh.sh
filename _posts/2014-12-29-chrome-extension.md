@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 小试chrome扩展
-date: 2014-12-29 10:11:00 +0800
+date: 2014-12-28 10:11:00
 categories: 手
 tags: chrome extension chrome扩展
 ---

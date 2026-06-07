@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LEDE折腾shadowsocks
-date: 2017-2-12 22:25:00 +0800
+date: 2017-02-12 22:25:00
 categories: 闲
 tags: lede openwrt shadowsocks chinadns ubnt 路由
 ---

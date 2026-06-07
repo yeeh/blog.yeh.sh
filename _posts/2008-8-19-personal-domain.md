@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 个人域名
-date: 2008-08-19 09:16:14 +0800
+date: 2008-08-18 09:16:14
 tags: domain
 categories: 好
 ---

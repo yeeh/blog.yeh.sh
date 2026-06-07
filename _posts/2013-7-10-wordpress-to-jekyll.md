@@ -1,7 +1,7 @@
 ---
 layout: post
 title: wordpress to jekyll转换完成
-date: 2013-7-10 7:12:15
+date: 2013-07-09 7:12:15
 categories: 手
 tags: wordpress theme jekyll github
 ---

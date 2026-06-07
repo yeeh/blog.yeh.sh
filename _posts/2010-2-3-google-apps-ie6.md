@@ -1,7 +1,7 @@
 ---
 layout: post
 title: google apps即将停止支持ie6
-date: 2010-02-03 14:35:29
+date: 2010-02-02 14:35:29
 tags: apps google ie6
 categories: 手
 ---

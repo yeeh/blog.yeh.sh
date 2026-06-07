@@ -1,7 +1,7 @@
 ---
 layout: post
 title: adidas.net
-date: 2007-09-09 06:25:40 +0800
+date: 2007-09-08 06:25:40
 tags: 域名
 categories: 好
 ---

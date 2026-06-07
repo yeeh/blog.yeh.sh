@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 抢得inyue.com
-date: 2008-05-16 12:39:47 +0800
+date: 2008-05-15 12:39:47
 tags: 域名
 categories: 好
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 智能垃圾桶
-date: 2024-10-17 7:00:00 +0800
+date: 2024-10-16 7:00:00
 categories: 好
 tags: 智能 垃圾桶 smart trash bin
 ---

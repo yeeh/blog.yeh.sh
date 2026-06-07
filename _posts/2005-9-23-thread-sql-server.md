@@ -1,7 +1,7 @@
 ---
 layout: post
 title: sql server 线程
-date: 2005-09-23 19:16:28 +0800
+date: 2005-09-23 19:16:28
 tags: sqlserver
 categories: 手
 ---

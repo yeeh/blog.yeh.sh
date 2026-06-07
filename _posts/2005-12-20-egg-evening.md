@@ -1,7 +1,7 @@
 ---
 layout: post
 title: egg evening
-date: 2005-12-20 07:57:06
+date: 2005-12-19 07:57:06
 categories: 闲
 ---
 其实半月前在家乐福就看到海报了.

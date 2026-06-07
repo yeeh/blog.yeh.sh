@@ -1,7 +1,7 @@
 ---
 layout: post
 title: mybook live添加迅雷远程
-date: 2014-1-3 01:00:00 +0800
+date: 2014-01-02 01:00:00
 categories: 手
 tags: 迅雷 mybook-live 远程
 ---

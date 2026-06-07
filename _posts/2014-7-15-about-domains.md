@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 域名那些事儿
-date: 2014-7-15 23:01:00 +0800
+date: 2014-07-15 23:01:00
 categories: 手
 tags: 域名 domain
 ---

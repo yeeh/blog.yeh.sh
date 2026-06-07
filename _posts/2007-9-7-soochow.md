@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 抢到了soochow.com
-date: 2007-09-07 01:05:58 +0800
+date: 2007-09-06 01:05:58
 tags: 域名
 categories: 好
 ---

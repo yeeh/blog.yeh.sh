@@ -1,7 +1,7 @@
 ---
 layout: post
 title: nginx添加服务器端合并压缩
-date: 2013-12-29 16:45:02 +0800
+date: 2013-12-29 16:45:02
 categories: 手
 tags: centos nginx http-concat
 ---

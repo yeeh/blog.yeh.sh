@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PR7站点最新收录（08.4.30）之个人站
-date: 2008-05-05 10:16:20 +0800
+date: 2008-05-04 10:16:20
 tags: pagerank
 categories: 闲
 ---

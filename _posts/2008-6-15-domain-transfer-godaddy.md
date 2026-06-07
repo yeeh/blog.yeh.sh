@@ -1,7 +1,7 @@
 ---
 layout: post
 title: domain transfer @ godaddy
-date: 2008-06-15 23:32:53 +0800
+date: 2008-06-15 23:32:53
 tags: domain
 tags: godaddy
 tags: 域名

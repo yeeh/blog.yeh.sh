@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 怀念黄家驹,怀念beyond----写在13周年祭
-date: 2006-06-30 08:27:16 +0800
+date: 2006-06-29 08:27:16
 tags: beyond
 categories: 好
 ---

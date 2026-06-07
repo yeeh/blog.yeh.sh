@@ -1,7 +1,7 @@
 ---
 layout: post
 title: sublime text 插件
-date: 2013-9-12 11:00:00 +0800
+date: 2013-09-11 11:00:00
 categories: 好
 tags: sublime-text
 ---

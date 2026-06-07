@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 叶子无限分类(SQL_Server2K存储过程版)
-date: 2005-11-16 13:07:21
+date: 2005-11-15 13:07:21
 tags: sql
 categories: 手
 tags: 无限分类

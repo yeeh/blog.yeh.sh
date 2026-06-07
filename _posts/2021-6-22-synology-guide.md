@@ -1,7 +1,7 @@
 ---
 layout: post
 title: synology nas个人使用指南
-date: 2021-6-22 0:41:00 +0800
+date: 2021-06-21 0:41:00
 categories: 手
 tags: synology nas photo drive 群晖
 ---

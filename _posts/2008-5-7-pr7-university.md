@@ -1,7 +1,7 @@
 ---
 layout: post
 title: pr7站点最新收录（08.4.30）之高校站
-date: 2008-05-07 08:49:39 +0800
+date: 2008-05-06 08:49:39
 tags: pagerank
 categories: 闲
 ---

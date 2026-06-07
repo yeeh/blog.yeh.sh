@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 新装mac
-date: 2021-11-13 9:00:00 +0800
+date: 2021-11-12 9:00:00
 categories: 手
 tags: itrem2 oh-my-zsh zsh
 ---

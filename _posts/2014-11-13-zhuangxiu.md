@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 装修记
-date: 2014-11-13 00:30:00 +0800
+date: 2014-11-12 00:30:00
 categories: 手
 tags: 装修
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 算页数
-date: 2006-03-08 17:10:46 +0800
+date: 2006-03-08 17:10:46
 categories: 手
 ---
 RecordCount=101

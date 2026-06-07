@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PR8站点最新收录（08.4.30）之其他站
-date: 2008-05-06 12:12:19 +0800
+date: 2008-05-05 12:12:19
 tags: pagerank
 categories: 闲
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 叶子asp分页类
-date: 2005-09-26 10:38:07
+date: 2005-09-25 10:38:07
 tags: asp
 tags: 分页
 categories: 手

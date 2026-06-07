@@ -1,7 +1,7 @@
 ---
 layout: post
 title: firefox 3.0.1的event实现bug
-date: 2008-09-23 20:41:54 +0800
+date: 2008-09-23 20:41:54
 tags: event firefox
 categories: 手
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 给github的个人和组织添加主页
-date: 2013-07-29 23:00:12 +0800
+date: 2013-07-29 23:00:12
 categories: 好
 tags: github pages
 ---

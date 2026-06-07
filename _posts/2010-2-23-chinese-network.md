@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 中国网络已死，有事烧纸。
-date: 2010-02-23 08:37:28 +0800
+date: 2010-02-22 08:37:28
 tags: 网络
 categories: 闲
 ---

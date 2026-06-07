@@ -1,7 +1,7 @@
 ---
 layout: post
 title: sublime text 3设置
-date: 2013-7-16 18:46:10 +0800
+date: 2013-07-16 18:46:10
 categories: 好
 tags: sublime-text
 ---
