@@ -362,6 +362,10 @@ code, kbd, pre, samp { font-family: var(--mono), var(--mono-fallback); font-size
 .entry-content p { margin-top: 1.15rem; }
 .entry-content a { color: inherit; text-decoration: underline; }
 .entry-content a:hover { color: var(--accent); }
+.friend-links a {
+  display: inline-block;
+  margin: 0 12px 6px 0;
+}
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,

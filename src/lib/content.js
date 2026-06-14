@@ -23,9 +23,11 @@ export const friendLinks = [
 const root = process.cwd();
 const md = new MarkdownIt({ html: true, linkify: false, typographer: false });
 
-const linkContent = friendLinks
-  .map(({ title, href, text }) => `<a target="_blank" title="${title}" href="${href}">${text}</a>`)
-  .join('\n') + '\n';
+const linkContent = '<div class="friend-links">\n'
+  + friendLinks
+    .map(({ title, href, text }) => `<a target="_blank" title="${title}" href="${href}">${text}</a>`)
+    .join('\n')
+  + '\n</div>\n';
 
 function preprocess(content) {
   return content.replaceAll('{% include linkcontent.html %}', linkContent);
