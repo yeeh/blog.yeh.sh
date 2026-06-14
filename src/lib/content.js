@@ -14,10 +14,18 @@ export const site = {
   comments: 'yeh',
 };
 
+export const friendLinks = [
+  { title: '聚友', href: 'http://www.juyo.org/', text: '聚友' },
+  { title: 'password generator', href: 'https://passid.org/', text: '密码生成器' },
+  { title: 'In乐', href: 'https://inyue.com/', text: 'In乐' },
+];
+
 const root = process.cwd();
 const md = new MarkdownIt({ html: true, linkify: false, typographer: false });
 
-const linkContent = '<a target="_blank" title="聚友" href="http://www.juyo.org/">聚友</a>\n<a target="_blank" title="password generator" href="https://passid.org/">密码生成器</a>\n<a target="_blank" title="In乐" href="https://inyue.com/">In乐</a>\n';
+const linkContent = friendLinks
+  .map(({ title, href, text }) => `<a target="_blank" title="${title}" href="${href}">${text}</a>`)
+  .join('\n') + '\n';
 
 function preprocess(content) {
   return content.replaceAll('{% include linkcontent.html %}', linkContent);

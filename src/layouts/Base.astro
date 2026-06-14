@@ -1,5 +1,5 @@
 ---
-import { site } from '../lib/content.js';
+import { site, friendLinks } from '../lib/content.js';
 const { title = site.name, page = {}, pagination = null } = Astro.props;
 const isHome = pagination?.page === 1;
 const isAbout = page.theme === 'about' && page.url !== '/about/skins.html';
@@ -61,9 +61,7 @@ const documentTitle = !title || title === site.name ? site.name : `${title} · $
 {showLinks ? (
 <div class="footer layout">
 <h6>Links</h6>
-<a target="_blank" title="聚友" href="http://www.juyo.org/">聚友</a>
-<a target="_blank" title="password generator" href="https://passid.org/">密码生成器</a>
-<a target="_blank" title="In乐" href="https://inyue.com/">In乐</a>
+{friendLinks.map((link) => <a target="_blank" title={link.title} href={link.href}>{link.text}</a>)}
     <nav class="footer-menu" aria-label="Footer navigation">
         <a class="rss" href="/rss.xml" rel="feed">RSS<span class="rss-icon" aria-hidden="true">ᯤ</span></a><a class="copyright" href={site.urlyeh} title="Yeh" target="_blank" rel="author">©<img alt="Yeh" src="/favicon.ico" /></a>
     </nav>
