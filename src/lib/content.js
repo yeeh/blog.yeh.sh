@@ -17,7 +17,7 @@ export const site = {
 const root = process.cwd();
 const md = new MarkdownIt({ html: true, linkify: false, typographer: false });
 
-const linkContent = '<a target="_blank" title="聚友" href="http://www.juyo.org/">聚友</a>\n<a target="_blank" title="password generator" href="https://www.passid.org/">密码生成器</a>\n';
+const linkContent = '<a target="_blank" title="聚友" href="http://www.juyo.org/">聚友</a>\n<a target="_blank" title="password generator" href="https://www.passid.org/">密码生成器</a>\n<a target="_blank" title="In乐" href="https://inyue.com/">In乐</a>\n';
 
 function preprocess(content) {
   return content.replaceAll('{% include linkcontent.html %}', linkContent);
