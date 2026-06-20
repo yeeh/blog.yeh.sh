@@ -59,3 +59,8 @@ Workflow file:
 - Pagination is enabled with `jekyll-paginate`.
 - The custom domain is `blog.yeh.sh`.
 - Comments are embedded via giscus in the site templates.
+
+## License
+
+- Code: [MIT](LICENSE)
+- Non-code content: [CC BY-NC-ND 4.0](CONTENT-LICENSE.md)
