@@ -1,6 +1,6 @@
 # blog.yeh.sh
 
-Source for <https://blog.yeh.sh/>.
+Source for <https://blog.yeh.sh>.
 
 This repository contains a Jekyll blog published with GitHub Pages.
 
