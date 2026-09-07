@@ -167,7 +167,11 @@ tags: 旁路由 DNS AdGuardHome MosDNS Mihomo YehBP
 
 另外，4 处宽带还组建了 SD-WAN，并将 AI 流量统一汇聚到主站出口，具体架构可参考：[多站点 Homelab：SD-WAN 组网 + 统一 AI 出口](https://blog.yeh.sh/post/2026/04/20/homelab-sdwan-ai-architecture.html)。
 
-方案有了，怎么部署最方便？这里介绍我自用的一键部署与菜单化管理工具：[Yeh Bypass Gateway](https://github.com/perryyeh/yehbp)，简称 `yehbp`。
+方案有了，怎么部署最方便？
+
+这套方案我用了很久，但早期部署仍需要手动敲命令。近两年前，借助 AI 开始把它做成快捷部署工具；在断断续续的实际部署中不断测试边界条件、修复问题，现在终于可以放出来了。
+
+[Yeh Bypass Gateway](https://github.com/perryyeh/yehbp)，简称 `yehbp`，是一套一键部署与菜单化管理工具。支持群晖、飞牛、Armbian 等环境；从百元网心云到高配群晖、Mac 都可使用，配合 AI 食用更佳。
 
 ![YehBP 交互式主菜单](/uploads/2026/09-07-yehbp-main-menu.jpg)
 
