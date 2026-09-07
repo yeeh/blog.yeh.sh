@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">传统软路由：部署在光猫之后</title>
+  <desc id="desc">光猫之后先接软路由，所有内网流量都经过软路由。主路由或硬路由位于软路由之后，可承担无线和交换功能。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#49647e"/></marker>
+    <style>.bg{fill:#f8fbfd}.box{fill:#fff;stroke:#49647e;stroke-width:2;rx:12}.soft{fill:#fff1e6;stroke:#b66a2d;stroke-width:2.5;rx:12}.line{stroke:#49647e;stroke-width:3;fill:none;marker-end:url(#arrow)}.label{font:600 22px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#1e3447}.small{font:17px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#40586c}.warn{font:17px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#98531f}</style>
+  </defs>
+  <rect class="bg" width="1200" height="520"/>
+  <text x="600" y="48" text-anchor="middle" class="label" style="font-size:29px">传统软路由：部署在光猫之后</text>
+  <rect class="box" x="45" y="175" width="150" height="80"/><text x="120" y="208" text-anchor="middle" class="label">光猫</text><text x="120" y="235" text-anchor="middle" class="small">Internet 接入</text>
+  <rect class="soft" x="300" y="150" width="235" height="130"/><text x="417" y="190" text-anchor="middle" class="label">软路由</text><text x="417" y="220" text-anchor="middle" class="small">代理、DNS、路由 / NAT</text><text x="417" y="248" text-anchor="middle" class="small">全网流量入口</text>
+  <rect class="box" x="640" y="150" width="235" height="130"/><text x="757" y="190" text-anchor="middle" class="label">硬路由 / AP</text><text x="757" y="220" text-anchor="middle" class="small">可选：Wi-Fi、交换</text><text x="757" y="248" text-anchor="middle" class="small">也可能继续路由</text>
+  <rect class="box" x="980" y="150" width="175" height="130"/><text x="1067" y="190" text-anchor="middle" class="label">客户端</text><text x="1067" y="220" text-anchor="middle" class="small">手机、电脑、电视</text><text x="1067" y="248" text-anchor="middle" class="small">NAS 等</text>
+  <path class="line" d="M195 215 H300"/><path class="line" d="M535 215 H640"/><path class="line" d="M875 215 H980"/>
+  <path d="M300 340 H875" stroke="#b66a2d" stroke-width="2" stroke-dasharray="9 6" fill="none"/>
+  <text x="587" y="330" text-anchor="middle" class="warn">所有设备的直连与代理流量都要经过软路由</text>
+  <text x="600" y="425" text-anchor="middle" class="small">优点：路径直观、由软路由统一接管。缺点：软路由成为全网性能与可用性的单点，主路由后再接路由还可能引入双 NAT。</text>
+</svg>
