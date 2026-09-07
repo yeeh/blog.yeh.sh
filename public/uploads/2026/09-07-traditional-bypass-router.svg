@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">传统旁路由：软路由接入交换机</title>
+  <desc id="desc">软路由与普通客户端一起接到交换机。需要代理的客户端将 DNS 和默认网关改为软路由，所有该客户端的流量先经过软路由，再回到主路由出网；未修改设置的设备仍由主路由直接出网。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#48627b"/></marker>
+    <style>.bg{fill:#f8fbfd}.box{fill:#fff;stroke:#48627b;stroke-width:2;rx:12}.soft{fill:#fff2e7;stroke:#b7692d;stroke-width:2;rx:12}.client{fill:#edf8ef;stroke:#387b56;stroke-width:2;rx:12}.line{stroke:#48627b;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.orange{stroke:#b7692d;stroke-width:3;fill:none;marker-end:url(#arrow)}.label{font:600 21px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#1f3447}.small{font:17px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#40586c}.hint{font:16px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#98531f}</style>
+  </defs>
+  <rect class="bg" width="1200" height="560"/>
+  <text x="600" y="45" text-anchor="middle" class="label" style="font-size:28px">传统旁路由：软路由接入交换机</text>
+  <rect class="box" x="45" y="135" width="145" height="70"/><text x="117" y="164" text-anchor="middle" class="label">光猫</text><text x="117" y="189" text-anchor="middle" class="small">Internet 接入</text>
+  <rect class="box" x="270" y="125" width="205" height="90"/><text x="372" y="160" text-anchor="middle" class="label">主路由</text><text x="372" y="190" text-anchor="middle" class="small">10.0.0.1</text>
+  <rect class="box" x="555" y="135" width="175" height="70"/><text x="642" y="164" text-anchor="middle" class="label">交换机 / AP</text><text x="642" y="189" text-anchor="middle" class="small">现有 LAN</text>
+  <path class="line" d="M190 170 H270"/><path class="line" d="M475 170 H555"/>
+  <rect class="soft" x="450" y="345" width="255" height="105"/><text x="577" y="380" text-anchor="middle" class="label">软路由 / 旁路由</text><text x="577" y="410" text-anchor="middle" class="small">代理、DNS、转发</text><text x="577" y="435" text-anchor="middle" class="small">上游网关：10.0.0.1</text>
+  <rect class="client" x="810" y="315" width="300" height="135"/><text x="960" y="350" text-anchor="middle" class="label">需要代理的客户端</text><text x="960" y="382" text-anchor="middle" class="small">DNS、默认网关手动设为</text><text x="960" y="410" text-anchor="middle" class="small">软路由 LAN IP</text><text x="960" y="435" text-anchor="middle" class="small">该设备全部流量经过软路由</text>
+  <rect class="box" x="810" y="105" width="300" height="95"/><text x="960" y="140" text-anchor="middle" class="label">普通客户端</text><text x="960" y="170" text-anchor="middle" class="small">保持主路由为默认网关</text><text x="960" y="192" text-anchor="middle" class="small">直接出网</text>
+  <path class="line" d="M730 170 H810"/><path class="line" d="M642 205 V290 H577 V345"/><path class="orange" d="M810 382 H705"/><path class="orange" d="M450 398 H372 V215"/>
+  <text x="285" y="305" text-anchor="middle" class="hint">已配置客户端：客户端 → 软路由 → 主路由 → Internet</text>
+  <text x="615" y="500" text-anchor="middle" class="small">问题：每台需要代理的设备都要改 DNS / 网关；且该设备的直连流量也会经过软路由。</text>
+</svg>
