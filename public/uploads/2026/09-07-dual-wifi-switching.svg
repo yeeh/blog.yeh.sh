@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">改进版软路由：双 Wi-Fi 切换</title>
+  <desc id="desc">主路由后的交换机连接软路由和无线接入点。无线接入点提供两个 Wi-Fi：直连 Wi-Fi 下发主路由的 DNS 与网关；代理 Wi-Fi 下发软路由的 DNS 与网关。客户端通过切换 Wi-Fi 改变流量路径。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#48627b"/></marker>
+    <style>.bg{fill:#f8fbfd}.box{fill:#fff;stroke:#48627b;stroke-width:2;rx:12}.soft{fill:#fff2e7;stroke:#b7692d;stroke-width:2;rx:12}.wifi1{fill:#eef4fc;stroke:#4c70a3;stroke-width:2;rx:12}.wifi2{fill:#fff2e7;stroke:#b7692d;stroke-width:2;rx:12}.client{fill:#edf8ef;stroke:#387b56;stroke-width:2;rx:12}.line{stroke:#48627b;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.orange{stroke:#b7692d;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.blue{stroke:#4c70a3;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.label{font:600 21px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#1f3447}.small{font:17px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#40586c}.hint{font:16px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#78501f}</style>
+  </defs>
+  <rect class="bg" width="1200" height="650"/>
+  <text x="600" y="45" text-anchor="middle" class="label" style="font-size:28px">改进版软路由：双 Wi-Fi 切换</text>
+  <rect class="box" x="45" y="135" width="140" height="75"/><text x="115" y="165" text-anchor="middle" class="label">光猫</text><text x="115" y="190" text-anchor="middle" class="small">Internet</text>
+  <rect class="box" x="260" y="125" width="195" height="95"/><text x="357" y="160" text-anchor="middle" class="label">主路由</text><text x="357" y="190" text-anchor="middle" class="small">网关 10.0.0.1</text>
+  <rect class="box" x="530" y="135" width="175" height="75"/><text x="617" y="165" text-anchor="middle" class="label">交换机</text><text x="617" y="190" text-anchor="middle" class="small">现有 LAN</text>
+  <path class="line" d="M185 172 H260"/><path class="line" d="M455 172 H530"/>
+  <rect class="soft" x="510" y="365" width="215" height="100"/><text x="617" y="400" text-anchor="middle" class="label">软路由</text><text x="617" y="430" text-anchor="middle" class="small">DNS、代理、转发</text><text x="617" y="454" text-anchor="middle" class="small">上游：主路由</text>
+  <rect class="box" x="800" y="125" width="175" height="95"/><text x="887" y="160" text-anchor="middle" class="label">AP</text><text x="887" y="190" text-anchor="middle" class="small">两个 SSID</text>
+  <path class="line" d="M705 172 H800"/><path class="line" d="M617 210 V365"/>
+  <rect class="wifi1" x="810" y="315" width="300" height="100"/><text x="960" y="350" text-anchor="middle" class="label">直连 Wi-Fi</text><text x="960" y="380" text-anchor="middle" class="small">DNS、网关：主路由</text><text x="960" y="403" text-anchor="middle" class="small">直接出网</text>
+  <rect class="wifi2" x="810" y="475" width="300" height="110"/><text x="960" y="510" text-anchor="middle" class="label">代理 Wi-Fi</text><text x="960" y="540" text-anchor="middle" class="small">DNS、网关：软路由</text><text x="960" y="564" text-anchor="middle" class="small">全部流量先经软路由</text>
+  <path class="blue" d="M887 220 V280 H960 V315"/><path class="orange" d="M887 220 V450 H960 V475"/>
+  <rect class="client" x="70" y="490" width="275" height="90"/><text x="207" y="525" text-anchor="middle" class="label">客户端</text><text x="207" y="555" text-anchor="middle" class="small">切换 Wi-Fi 改变路径</text>
+  <path d="M345 535 H755" stroke="#8a9bad" stroke-width="2" stroke-dasharray="9 6" fill="none"/>
+  <text x="600" y="625" text-anchor="middle" class="hint">限制：同一客户端需要在直连与代理之间切换 Wi-Fi。</text>
+</svg>

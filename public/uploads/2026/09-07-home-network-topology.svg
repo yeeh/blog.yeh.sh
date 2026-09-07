@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">普通家庭网络结构</title>
+  <desc id="desc">光猫连接主路由，主路由连接交换机和无线接入点；手机、平板、电脑、电视和 NAS 接入局域网。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#49647e"/></marker>
+    <style>.bg{fill:#f8fbfd}.box{fill:#fff;stroke:#49647e;stroke-width:2;rx:12}.device{fill:#edf8ef;stroke:#3b7a57;stroke-width:2;rx:12}.line{stroke:#49647e;stroke-width:3;fill:none;marker-end:url(#arrow)}.branch{stroke:#49647e;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.label{font:600 22px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#1e3447}.small{font:17px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#40586c}</style>
+  </defs>
+  <rect class="bg" width="1200" height="480"/>
+  <text x="600" y="50" text-anchor="middle" class="label" style="font-size:29px">普通家庭网络结构</text>
+  <rect class="box" x="55" y="165" width="155" height="85"/><text x="132" y="200" text-anchor="middle" class="label">光猫</text><text x="132" y="228" text-anchor="middle" class="small">宽带接入</text>
+  <rect class="box" x="305" y="155" width="205" height="105"/><text x="407" y="195" text-anchor="middle" class="label">主路由</text><text x="407" y="225" text-anchor="middle" class="small">网关、DHCP、出网</text>
+  <rect class="box" x="605" y="155" width="220" height="105"/><text x="715" y="195" text-anchor="middle" class="label">交换机 / AP</text><text x="715" y="225" text-anchor="middle" class="small">有线与 Wi-Fi 接入</text>
+  <rect class="device" x="920" y="100" width="220" height="85"/><text x="1030" y="135" text-anchor="middle" class="label">移动设备</text><text x="1030" y="163" text-anchor="middle" class="small">手机、平板</text>
+  <rect class="device" x="920" y="270" width="220" height="110"/><text x="1030" y="307" text-anchor="middle" class="label">固定设备</text><text x="1030" y="336" text-anchor="middle" class="small">电脑、电视、NAS</text>
+  <path class="line" d="M210 207 H305"/><path class="line" d="M510 207 H605"/><path class="branch" d="M825 207 H875 V142 H920"/><path class="branch" d="M825 207 H875 V325 H920"/>
+  <text x="600" y="438" text-anchor="middle" class="small">所有设备默认网关和 DNS 都由主路由下发，普通流量直接由主路由出网。</text>
+</svg>
