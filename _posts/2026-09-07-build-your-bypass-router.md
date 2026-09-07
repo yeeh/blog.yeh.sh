@@ -171,7 +171,11 @@ tags: 旁路由 DNS AdGuardHome MosDNS Mihomo YehBP
 
 这套方案我用了很久，但早期部署仍需要手动敲命令。近两年前，借助 AI 开始把它做成快捷部署工具；在断断续续的实际部署中不断测试边界条件、修复问题，现在终于可以放出来了。
 
-[Yeh Bypass Gateway](https://github.com/perryyeh/yehbp)，简称 `yehbp`，是一套一键部署与菜单化管理工具。支持群晖、飞牛、Armbian 等环境；从百元网心云到高配群晖、Mac 都可使用，配合 AI 食用更佳。
+[Yeh Bypass Gateway](https://github.com/perryyeh/yehbp)，简称 `yehbp`，是一套一键部署与菜单化管理工具。
+
+支持群晖、飞牛、Armbian 等环境。
+
+从百元网心云到万元群晖 / Mac，总能选到合适的，配合 AI 食用更佳。
 
 ![YehBP 交互式主菜单](/uploads/2026/09-07-yehbp-main-menu.jpg)
 
