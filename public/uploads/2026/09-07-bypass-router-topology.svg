@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">DNS 分流与 Fake-IP 旁路由网络结构</title>
+  <desc id="desc">客户端默认网关保持在主路由。DNS 主机负责 AdGuard Home 和 MosDNS；代理域名生成 Fake-IP，经主路由的静态路由转到 Surge 或 Mihomo 代理主机。直连流量直接由主路由出网。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#46647f"/></marker>
+    <style>
+      .bg{fill:#f8fbfd}.box{fill:#fff;stroke:#46647f;stroke-width:2;rx:12}.dns{fill:#edf8ef;stroke:#3b7a57;stroke-width:2;rx:12}.proxy{fill:#fff3e8;stroke:#b66a2d;stroke-width:2;rx:12}.net{fill:#eef3fb;stroke:#506e9a;stroke-width:2;rx:12}.line{stroke:#46647f;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.dash{stroke:#9a5b26;stroke-width:2.5;stroke-dasharray:8 6;fill:none;marker-end:url(#arrow)}.label{font:600 21px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#1f3447}.small{font:17px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#39546a}.hint{font:16px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#8b4f1e}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="720"/>
+  <text x="600" y="45" text-anchor="middle" class="label" style="font-size:28px">DNS 分流 + Fake-IP 静态路由旁路由</text>
+
+  <rect class="box" x="45" y="125" width="150" height="70"/><text x="120" y="155" text-anchor="middle" class="label">光猫</text><text x="120" y="180" text-anchor="middle" class="small">Internet 接入</text>
+  <rect class="box" x="280" y="115" width="205" height="90"/><text x="382" y="150" text-anchor="middle" class="label">主路由</text><text x="382" y="180" text-anchor="middle" class="small">默认网关 10.0.0.1</text>
+  <rect class="box" x="570" y="125" width="165" height="70"/><text x="652" y="155" text-anchor="middle" class="label">交换机 / AP</text><text x="652" y="180" text-anchor="middle" class="small">现有 LAN</text>
+  <rect class="box" x="820" y="115" width="250" height="90"/><text x="945" y="150" text-anchor="middle" class="label">客户端</text><text x="945" y="180" text-anchor="middle" class="small">手机、电脑、电视、NAS</text>
+
+  <path class="line" d="M195 160 H280"/><path class="line" d="M485 160 H570"/><path class="line" d="M735 160 H820"/>
+
+  <rect class="dns" x="245" y="350" width="275" height="145"/><text x="382" y="385" text-anchor="middle" class="label">DNS 服务主机</text><text x="382" y="416" text-anchor="middle" class="small">10.0.1.114</text><text x="382" y="449" text-anchor="middle" class="small">AdGuard Home → MosDNS</text><text x="382" y="475" text-anchor="middle" class="small">直连解析 / 代理域名分流</text>
+  <rect class="proxy" x="705" y="350" width="300" height="145"/><text x="855" y="385" text-anchor="middle" class="label">代理主机</text><text x="855" y="416" text-anchor="middle" class="small">10.0.1.120 · Surge / Mihomo</text><text x="855" y="449" text-anchor="middle" class="small">Fake-IP DNS 与代理出口</text><text x="855" y="475" text-anchor="middle" class="small">198.18.0.0/15</text>
+
+  <path class="line" d="M945 205 V280 H382 V350"/><text x="610" y="268" text-anchor="middle" class="small">DNS 查询</text>
+  <path class="line" d="M520 422 H705"/><text x="612" y="408" text-anchor="middle" class="small">需要代理的域名</text>
+  <path class="dash" d="M945 205 V570 H485 V495"/><text x="680" y="558" text-anchor="middle" class="hint">Fake-IP 流量 → 主路由静态路由 → 10.0.1.120</text>
+
+  <rect class="net" x="940" y="600" width="185" height="70"/><text x="1032" y="632" text-anchor="middle" class="label">Internet</text><text x="1032" y="658" text-anchor="middle" class="small">直连或代理出口</text>
+  <path class="line" d="M485 160 V280 H1032 V600"/><text x="770" y="267" text-anchor="middle" class="small">真实 IP：主路由直接出网</text>
+  <path class="line" d="M1005 422 H1085 V600"/>
+</svg>
