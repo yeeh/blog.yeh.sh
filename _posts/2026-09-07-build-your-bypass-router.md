@@ -12,7 +12,7 @@ tags: 旁路由 DNS AdGuardHome MosDNS Mihomo YehBP
 
 ## 一、传统软路由：部署在光猫之后
 
-最常见的早期方案，是把软路由直接放在光猫之后，再连接硬路由、交换机和 AP；后面的硬路由通常只负责 Wi-Fi 和交换，也可能继续承担路由功能。
+最常见的早期方案，是把软路由直接放在光猫之后，再连接硬路由、交换机和 AP。
 
 ![传统软路由：部署在光猫之后](/uploads/2026/09-07-traditional-soft-router.svg)
 
