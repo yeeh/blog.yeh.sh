@@ -22,7 +22,7 @@ tags: 旁路由 DNS AdGuardHome MosDNS Mihomo YehBP
 
 把软路由接在主路由后的交换机上。
 
-### 手动切换
+### 1. 手动切换
 
 ![改进版软路由：接入交换机](/uploads/2026/09-07-traditional-bypass-router.svg)
 
@@ -30,7 +30,15 @@ tags: 旁路由 DNS AdGuardHome MosDNS Mihomo YehBP
 
 这样不用调整主路由，但每台需要代理的设备都要单独设置，而且这些设备的直连流量和代理流量仍会先经过软路由。
 
-### 双 Wi-Fi 切换
+### 2. 软路由 DHCP
+
+![软路由 DHCP：软路由接入交换机并作为全网默认网关](/uploads/2026/09-07-soft-router-dhcp.svg)
+
+软路由仍接在交换机上，但由软路由开启 DHCP、主路由关闭 DHCP。典型场景是 Mac mini 上运行 Surge：它通过 DHCP 向全网宣告自身为默认网关，局域网设备会把 Mac 当作网关上网。
+
+这套方案的缺陷是 Mac mini 重启或故障时，局域网设备的默认网关不可用，可能全网断网。
+
+### 3. 双 Wi-Fi 切换
 
 ![改进版软路由：双 Wi-Fi 切换](/uploads/2026/09-07-dual-wifi-switching.svg)
 

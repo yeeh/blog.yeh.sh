@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">软路由 DHCP：软路由接入交换机并作为全网默认网关</title>
+  <desc id="desc">光猫连接主路由，主路由关闭 DHCP 后连接交换机和 AP。运行 Surge 的 Mac mini 也接入交换机并开启 DHCP，将自身作为全网客户端默认网关。客户端流量先到 Mac mini，再经主路由出网。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#48627b"/></marker>
+    <style>.bg{fill:#f8fbfd}.box{fill:#fff;stroke:#48627b;stroke-width:2;rx:12}.soft{fill:#fff2e7;stroke:#b7692d;stroke-width:2;rx:12}.client{fill:#edf8ef;stroke:#387b56;stroke-width:2;rx:12}.line{stroke:#48627b;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.orange{stroke:#b7692d;stroke-width:3;fill:none;marker-end:url(#arrow)}.label{font:600 21px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#1f3447}.small{font:17px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#40586c}.hint{font:16px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#98531f}</style>
+  </defs>
+  <rect class="bg" width="1200" height="620"/>
+  <text x="600" y="45" text-anchor="middle" class="label" style="font-size:28px">软路由 DHCP：软路由接入交换机，作为全网默认网关</text>
+  <rect class="box" x="45" y="135" width="145" height="70"/><text x="117" y="164" text-anchor="middle" class="label">光猫</text><text x="117" y="189" text-anchor="middle" class="small">Internet 接入</text>
+  <rect class="box" x="270" y="125" width="205" height="90"/><text x="372" y="160" text-anchor="middle" class="label">主路由</text><text x="372" y="190" text-anchor="middle" class="small">10.0.0.1 · DHCP 关闭</text>
+  <rect class="box" x="555" y="135" width="175" height="70"/><text x="642" y="164" text-anchor="middle" class="label">交换机 / AP</text><text x="642" y="189" text-anchor="middle" class="small">现有 LAN</text>
+  <rect class="client" x="840" y="105" width="300" height="110"/><text x="990" y="140" text-anchor="middle" class="label">局域网客户端</text><text x="990" y="170" text-anchor="middle" class="small">DHCP 获取 IP、DNS、默认网关</text><text x="990" y="195" text-anchor="middle" class="small">默认网关：10.0.0.120</text>
+  <path class="line" d="M190 170 H270"/><path class="line" d="M475 170 H555"/><path class="line" d="M730 170 H840"/>
+  <rect class="soft" x="435" y="350" width="345" height="135"/><text x="607" y="385" text-anchor="middle" class="label">软路由：Mac mini + Surge</text><text x="607" y="415" text-anchor="middle" class="small">接入交换机 · DHCP 开启</text><text x="607" y="442" text-anchor="middle" class="small">DHCP 下发自身为默认网关</text><text x="607" y="468" text-anchor="middle" class="small">10.0.0.120</text>
+  <path class="line" d="M642 205 V350"/><text x="667" y="280" class="small">LAN 接入</text>
+  <path class="orange" d="M990 215 V285 H780 V400"/><text x="885" y="270" text-anchor="middle" class="hint">客户端流量先到 Mac mini</text>
+  <path class="orange" d="M435 432 H330 V215"/><text x="245" y="315" text-anchor="middle" class="hint">再经主路由出网</text>
+  <text x="600" y="555" text-anchor="middle" class="small">缺陷：Mac mini 重启或故障时，全网客户端的默认网关不可用，可能全部断网。</text>
+</svg>
