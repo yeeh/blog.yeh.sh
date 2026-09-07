@@ -1,0 +1,15 @@
+---
+const target = '/post/2018/12/08/new-mac.html';
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={new URL(target, Astro.site).href} />
+    <title>页面已迁移</title>
+  </head>
+  <body>
+    <p>本文已合并到 <a href={target}>《新装 Mac》</a>。</p>
+  </body>
+</html>
