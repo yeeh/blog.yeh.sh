@@ -169,19 +169,20 @@ tags: 旁路由 DNS AdGuardHome MosDNS Mihomo YehBP
 
 ## 九、个人部署参考
 
-我目前的组合是：
+目前在用的组合是：
 
-- 主站：UniFi UDM Beast + 飞牛（硬酷 R2 Max）+ Mac mini M4 16GB；
-- 另外三处宽带：UniFi UDM SE / UCG Ultra / UX7 + 网心云 OECT（Armbian / 飞牛）；
-- 主站另有一台 NanoPi R76S，运行第二套 AdGuard Home + MosDNS，作为 DNS 备用。
+- 主站：UniFi UDM Beast + 飞牛（硬酷 R2 Max，主力）+ Mac mini M4 16 GB；另有一台 Armbian 备用机，运行第二套 AdGuard Home + MosDNS。
+- 另外三处宽带：UniFi UDM SE / UCG Ultra / UX7 + 网心云 OECT（RK3566，Armbian / 飞牛）。
 
-这套模式已稳定运行一年多。实际使用中，备用 DNS 更多是为了覆盖 NAS 重启的短暂窗口；若主机本身很稳定，是否部署备用节点应根据自己的可用性要求决定。
+这几年来硬件不断增减，才逐渐形成现在的配置；例如一年前主力还是群晖 RS1221+。不过整体模式已经稳定运行多年。
+
+实际使用中，备用 DNS 主要用于覆盖主力 NAS 重启的短暂窗口。若主机本身足够稳定，是否部署备用节点应按自己的可用性要求决定；例如另外三处宽带没有备用 DNS，运行也很稳定。
 
 另外，4 处宽带还组建了 SD-WAN，并将 AI 流量统一汇聚到主站出口，具体架构可参考：[多站点 Homelab：SD-WAN 组网 + 统一 AI 出口](https://blog.yeh.sh/post/2026/04/20/homelab-sdwan-ai-architecture.html)。
 
-方案有了，怎么部署最方便？
+## 方案有了，怎么部署最方便？
 
-这套方案我用了很久，但早期部署仍需要手动敲命令。近两年前，借助 AI 开始把它做成快捷部署工具；在断断续续的实际部署中不断测试边界条件、修复问题，现在终于可以放出来了。
+早期部署需要手动敲命令。近两年前，我开始借助 AI 将流程做成快捷部署工具，并在持续的实际部署中测试边界条件、修复问题；现在终于可以放出来了。
 
 [Yeh Bypass Gateway](https://github.com/perryyeh/yehbp)，简称 `yehbp`，是一套一键部署与菜单化管理工具。
 
