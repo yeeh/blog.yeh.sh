@@ -157,7 +157,7 @@ tags: 旁路由 DNS AdGuardHome MosDNS Mihomo YehBP
 - **多网口需求**：EasyPi R1 Pro 一类带多个 1G / 2.5G 网口的设备，适合需要多网段或多线路的场景。
 - **高性能代理**：Mac mini 可以运行 Surge 或 Mihomo，适合承担高吞吐代理。
 
-可选系统包括 Armbian、Debian、Ubuntu，以及群晖 DSM、飞牛 fnOS 等 NAS 系统的容器环境。实现本方案的重点不在系统名称，而在于 DNS 链路、Fake-IP 路由和代理核心三者能正确协作。
+可选系统包括 Armbian、Debian、Ubuntu，以及群晖 DSM、飞牛 fnOS 等 NAS 系统的容器环境。AdGuard Home、MosDNS 这类 DNS 服务内存占用通常不大；Mihomo 在规则和连接较多时占用会明显上升。若旁路由同时运行这些服务，建议预留不少于 1 GB 内存；比如，配备 1 GB 内存的 OpenWrt 或 Armbian 裸机也可以作为入门方案。
 
 ## 八、部署建议
 
